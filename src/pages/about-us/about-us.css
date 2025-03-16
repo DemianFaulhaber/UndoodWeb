@@ -1,0 +1,45 @@
+.about-us{
+    margin: 20vw 10vw 0 10vw;
+    display: block;
+    color: #147dbe;
+}
+
+.join-us{
+    margin-top: 3vw;
+    text-align: center;
+}
+
+.wrapping-text{
+    overflow-wrap: anywhere;
+}
+
+.first-image{
+    width: 50vw;
+    float: left;
+    margin: 0 0.5rem 0 0;
+    /* clear: left; */
+}
+
+.second-image{
+    width: 50vw;
+    float: right;
+    margin:0 0 0.5rem;
+    /* clear: right; */
+}
+
+/* team */
+
+.team{
+    margin: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.team h1{
+    text-align: center;
+    color: #064d79;
+}
+
+

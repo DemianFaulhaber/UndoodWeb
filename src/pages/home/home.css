@@ -1,0 +1,29 @@
+.card-banner{
+    display: grid;
+    justify-content: center;
+    gap: 10vw;
+    margin-bottom: 10vw;
+    margin-top: 20vw;
+}
+
+
+.impact-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin: 0 15vw;
+    color: #064d79;
+    text-align: center;
+    margin-bottom: 10vw;
+}
+
+.impact-item{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.impact-item img{
+    width: 15vw;
+}

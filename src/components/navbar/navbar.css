@@ -1,0 +1,94 @@
+/* conditionals */
+    .scrolling-down{
+        top: -20vh;
+    }
+
+    .scrolling-up{
+        top: 0;
+    }
+
+/* end conditionals */
+
+.navbar{
+    position: fixed;
+    height: 15vw;
+    width: 100%;
+    background-color: #abd9e9;
+    transition: top 0.3s ease-in-out;
+    z-index: 100;
+    color: #064d79;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.navbar button{
+    width: 10vw;
+    height: 10vw;
+    background:none;
+    border: none;
+    font-size: 10vw;
+    margin-left: 1vw;
+}
+
+.navbar button:hover{
+    cursor: pointer;
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-self: center;
+    gap: 1vw;
+    font-size: 4vw;
+}
+
+.navbar-logo img{
+    width: 10vw;
+}
+
+/* menu */
+
+/* conditionals */
+
+.menu-hide{
+    left: -100vw;
+}
+
+.menu-visible{
+    left: 0;
+}
+
+/* end conditionals */
+
+
+.menu-container{
+    width: fit-content;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: left .2s ease-in-out;
+    z-index: 1000;
+}
+
+.menu-background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    opacity: 50%;
+    background-color: black;
+    transition: opacity .3s;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    height: 100%;
+    width: 55vw;
+    background-color: red;
+}
+
+/* end menu */

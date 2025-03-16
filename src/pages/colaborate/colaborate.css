@@ -1,0 +1,34 @@
+.colaborate-card-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    margin: 20vw 10vw;
+}
+
+.donations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.colaborate-card-banner h2, p{
+    color: #064d79;
+}
+
+.donations-redirect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.colaboration-redirect{
+    color: white;
+    background-color: #064d79;
+    padding: 3vw 5vw;
+    border-radius: 5vw;
+}
