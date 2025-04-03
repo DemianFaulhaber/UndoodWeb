@@ -1,31 +1,38 @@
 import { useTranslation } from 'react-i18next'
 import './footer.css'
+import { Link } from 'react-router-dom'
 
 export default function Footer(){
     const {t, i18n} = useTranslation(['footer'])
 
 
     return(
-        <article className="footer">
+        <footer className="footer">
             <div className="social-media">
-                <a href="#" className="social-link">
-                    <img src="#" alt="socail-link-logo" />
+                <a href="#" className="social-link" target='blank'>
+                    <img src="instagram-logo.svg" alt="social-link-logo" />
                 </a>
-                <a href="#" className="social-link">
-                    <img src="#" alt="socail-link-logo" />
+                <a href="#" className="social-link" target='blank'>
+                    <img src="linkedin-logo.svg" alt="social-link-logo" />
                 </a>
-                <a href="#" className="social-link">
-                    <img src="#" alt="socail-link-logo" />
+                <a href="#" className="social-link" target='blank'>
+                    <img src="FB-logo.svg" alt="social-link-logo" />
                 </a>
             </div>
-            <div className="suscribe">
-                <img src="#" alt="mail-logo" />
-                <p>{t("suscribe")}</p>
+            <div className="contact">
+                <div className="suscribe contact-container">
+                    <a href="#" target='blank'>
+                        <img src="mail-logo.svg" alt="mail-logo" />
+                    </a>
+                    <p>{t("suscribe")}</p>
+                </div>
+                <div className="contact-us contact-container">
+                    <Link to="contact" >
+                        <img src="contact-icon.svg" alt="contact-logo" />
+                    </Link>
+                    <p>{t("contact-us")}</p>
+                </div>
             </div>
-            <div className="contact-us">
-                <img src="#" alt="contact-logo" />
-                <p>{t("contact-us")}</p>
-            </div>
-        </article>
+        </footer>
     )   
 }

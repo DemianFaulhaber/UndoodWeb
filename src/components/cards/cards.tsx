@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './cards.css'
 
 type LinkCardProps={
@@ -21,26 +22,26 @@ function LinkCard({imgDir,page,linkText}:LinkCardProps){
 type InfoCardProps = {
     imgDir:string,
     title:string,
-    subtitle:string,
-    linkText:string,
-    page:string,
     info:string,
-    insideAnchorText:string,
-    insideAnchorLink:string
+    subtitle?:string,
+    linkText?:string,
+    insideAnchorText?:string,
+    target?:string,
+    insideAnchorLink?:string,
+    personalizedContentClass?:string,
+    onClick?: () => void
 }
 
-function InfoCard({imgDir,title,info,linkText,page,insideAnchorText,insideAnchorLink,subtitle}:InfoCardProps){
+function InfoCard({onClick,personalizedContentClass,imgDir,title,info,insideAnchorText,insideAnchorLink,target,subtitle}:InfoCardProps){
     return(
         <>
-            <article className="vertical-info-card">
-                <img src={imgDir} alt="" />
-                <div className="card-info-container">
+            <article 
+            className={`vertical-info-card  ${personalizedContentClass}`}>
+                <img onClick={onClick} src={imgDir} alt="" />
+                <div className={`card-info-container`}>
                     <h1>{title}</h1>
                     <h2>{subtitle}</h2>
-                    <p>{info}<a href={insideAnchorLink}>{insideAnchorText}</a></p>
-                    <a href={page}>
-                        {linkText}
-                    </a>
+                    <p>{info}{insideAnchorLink ? <Link to={insideAnchorLink} target={target}>{insideAnchorText}</Link>: ""}</p>
                 </div>
             </article>
         </>

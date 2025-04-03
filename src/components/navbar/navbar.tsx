@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import'./navbar.css'
 import Menu from "./menu";
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useNavigation } from "../../context/navigationContext";
 
 export default function Navbar(){
     const [scrollingUp, setScrollingUp] = useState(true)
     const [scrollPos,setScrollPos] = useState(window.scrollY)
     const [menuOpen, setMenuOpen] = useState(false) 
     
+    const location = useLocation()
 
     useEffect(()=> {
         const handleScroll = () => {
@@ -22,7 +25,8 @@ export default function Navbar(){
         };
     },[scrollPos])
 
-    
+    const {t} = useTranslation(['navbar']);    
+    console.log(location.pathname)
 
     return(
         <article 
@@ -34,9 +38,35 @@ export default function Navbar(){
         >
             <Menu isOpen={menuOpen} closeMenu={() =>setMenuOpen(false)}>
                 <img src="logo.svg" alt="logo" />
-                {/* <Link to='#'>
-                    lorem
-                </Link> */}
+                <nav className="links">    
+                    <Link 
+                    to="/" 
+                    onClick={(() => setMenuOpen(false))}
+                    style={{color:location.pathname === "/" ? "white": "#064d79"}}
+                    >
+                        {t("links.Home")}
+                    </Link>
+                    <Link to="about" onClick={(() => setMenuOpen(false))}
+                    style={{color:location.pathname === "/about" ? "white": "#064d79"}}
+                    >
+                        {t("links.About-us")}
+                    </Link>
+                    <Link to="news" onClick={(() => setMenuOpen(false))}
+                    style={{color:location.pathname === "/news" ? "white": "#064d79"}}
+                    >
+                        {t("links.News")}
+                    </Link>    
+                    <Link to="colaborate" onClick={(() => setMenuOpen(false))}
+                    style={{color:location.pathname === "/colaborate" ? "white": "#064d79"}}
+                    >
+                        {t("links.Colaborate")}
+                    </Link>    
+                    <Link to="programs" onClick={(() => setMenuOpen(false))}
+                    style={{color:location.pathname === "/programs" ? "white": "#064d79"}}
+                    >
+                        {t("links.Programs")}
+                    </Link>    
+                </nav>
             </Menu>
             <button onClick={() => setMenuOpen(true)}>
                 <i className="bi bi-list"></i>

@@ -18,10 +18,10 @@
   display: flex;
 }
 
-h1, h2{
+h1, h2, button, label{
   font-family: 'Montserrat', serif;
 }
 
-p, a{
+p, a, h3, input, textarea{
   font-family: "Raleway", serif;
 }
