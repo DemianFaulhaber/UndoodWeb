@@ -3,7 +3,7 @@ import './footer.css'
 import { Link } from 'react-router-dom'
 
 export default function Footer(){
-    const {t, i18n} = useTranslation(['footer'])
+    const {t} = useTranslation(['footer'])
 
 
     return(

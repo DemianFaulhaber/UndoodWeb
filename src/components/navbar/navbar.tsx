@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import'./navbar.css'
 import Menu from "./menu";
 import { Link, useLocation} from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useNavigation } from "../../context/navigationContext";
 
 export default function Navbar(){
     const [scrollingUp, setScrollingUp] = useState(true)

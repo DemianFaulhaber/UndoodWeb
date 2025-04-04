@@ -28,3 +28,12 @@
     align-items: center;
     gap: 1vw;
 }
+
+@media(min-width:1024px){
+    .footer{
+        padding: 2vw;
+    }
+    .social-media img{
+        width: 3vw;
+    }
+}

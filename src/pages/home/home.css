@@ -27,3 +27,34 @@
 .impact-item img{
     width: 15vw;
 }
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+@media(min-width:1024px){
+    .card-banner{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        display: flex;
+        gap: 3vw; 
+    }
+    .impact-grid{
+        gap: 5vw;
+        margin-bottom: 5vw;
+    }
+    .impact-item{
+        flex-direction: column;
+        justify-content: center;
+        width: 10vw;
+    }
+    .impact-item img{
+        width: 7vw;
+    }
+    .items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

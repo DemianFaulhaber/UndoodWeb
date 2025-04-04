@@ -12,9 +12,9 @@ function LinkCard({imgDir,page,linkText}:LinkCardProps){
         <article className="vertical-action-card" 
         style={{"backgroundImage":`url(/${imgDir})`}}>
             {/* <img src={imgDir} alt="content"  /> */}
-            <a href={page}>
+            <Link to={page}>
                 {linkText}
-            </a>
+            </Link>
         </article>
     )
 }
