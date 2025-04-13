@@ -1,0 +1,60 @@
+.card-banner{
+    display: grid;
+    justify-content: center;
+    gap: 10vw;
+    margin-bottom: 10vw;
+    margin-top: 20vw;
+}
+
+
+.impact-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin: 0 15vw;
+    color: #064d79;
+    text-align: center;
+    margin-bottom: 10vw;
+}
+
+.impact-item{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.impact-item img{
+    width: 15vw;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+@media(min-width:1024px){
+    .card-banner{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        display: flex;
+        gap: 3vw; 
+    }
+    .impact-grid{
+        gap: 2vw;
+        margin-bottom: 1vw;
+    }
+    .impact-item{
+        flex-direction: column;
+        justify-content: center;
+        width: 10vw;
+    }
+    .impact-item img{
+        width: 7vw;
+    }
+    .items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

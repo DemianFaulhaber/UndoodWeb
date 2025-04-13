@@ -1,0 +1,39 @@
+.footer{
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    padding: 5vw;
+    background-color: #abd9e9;
+    color: #064d79;
+    display: flex;
+    gap: 5vw;
+}
+
+.social-media{
+    display: flex;
+    gap: 2vw;
+}
+
+.social-media img{
+    width: 10vw;
+}
+
+.contact{
+    display: flex;
+    gap: 5vw;
+}
+
+.contact-container{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+@media(min-width:1024px){
+    .footer{
+        padding: 1vw;
+    }
+    .social-media img{
+        width: 2vw;
+    }
+}

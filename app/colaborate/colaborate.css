@@ -1,0 +1,63 @@
+.colaborate-card-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    margin: 20vw 10vw;
+}
+
+.donations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.colaborate-card-banner h2, p{
+    color: #064d79;
+}
+
+.donations-redirect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.colaboration-redirect{
+    color: #064d79;
+    background-color: #abd9e9;
+    padding: 3vw 5vw;
+    border-radius: 5vw;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out, color .2s;
+}
+
+.colaboration-redirect:hover{
+    background-color:#064d79;
+    color: white;
+    border-color: #abd9e9;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media(min-width:1024px){
+    .colaborate-card-banner{
+        margin: 5vw 0;
+        flex-direction: row;
+        gap: 1vw;
+        align-items: baseline;
+    }
+    .colaboration-redirect{
+        padding: 1vw ;
+        font-size: 1.5vw;
+    }
+    .donations-redirect{
+        justify-content: space-between;
+
+    }
+}

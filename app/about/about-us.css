@@ -1,0 +1,103 @@
+.about-us{
+    margin: 20vw 10vw 0 10vw;
+    display: block;
+    flex-direction: column;
+    color: #147dbe;
+    text-align: justify;
+}
+
+.join-us{
+    margin-top: 3vw;
+    text-align: center;
+}
+
+/* .wrapping-text{
+    overflow-wrap: anywhere;
+} */
+
+.about-block{
+    display: block;
+    /* flex-direction: column; */
+    justify-content: baseline;
+
+}
+
+.about-us img{
+    height: fit-content;
+    width: 50%;
+    margin: 0 1vw 0 0;
+}
+
+.first-image{
+    float: left;
+}
+
+.second-image{
+    float: right;
+}
+
+/* team */
+
+.team-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10vw 0;
+    align-items: center;
+}
+
+.team-container h1{
+    color: #064d79;
+}
+
+.team{
+    margin: 0 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.team h1, h2{
+    text-align: center;
+    color: #064d79;
+}
+.coord{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.coord img{
+    width: 50%;
+}
+
+.comision .title{
+    text-align: left;
+    text-decoration: underline;
+}
+
+.comision h2{
+    color: #064d79;
+    text-align: end;
+}
+
+@media(min-width:1024px){
+    .about-us{
+        margin-top: 5vw;
+        font-size: 1.5vw;
+    }
+    .about-us a{
+        color: #064d79;
+        text-decoration: underline;
+    }
+    .comision h2{
+        text-align: left;
+    }
+    .coord{
+        justify-content: start;
+        width: 20vw;
+        gap: 2vw;
+    }
+    .coord img{
+        width: 20vw;
+    }
+}

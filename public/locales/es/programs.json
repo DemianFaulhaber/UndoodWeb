@@ -1,0 +1,32 @@
+{
+    "main-title":"Conocé nuestros programas y actividades",
+    "show-more":"ver más",
+    "colaborate-button":"Cómo Colaborar",
+    "recreative-afternoons":{
+        "title":"Tardes Recreativas",
+        "desc":"Visitamos hogares de niños jugando y con actividades personalizadas, creando un momento de disfrute y encuentro entre voluntarios y niños.",
+        "expanded-desc":"Visitamos hogares de niños llevando la posibilidad de una tarde recreativa con merienda y actividades pensadas específicamente para esos chicos/as con sus características y particularidades. Todas las actividades son personalizadas y se genera un momento de disfrute y encuentro mutuo entre voluntarios y niños residentes del hogar"
+    },
+    "health":{
+        "title":"Programas de salud",
+        "desc":"oftalmología, odontología preventiva para cuidar la salud de los chicos en los hogares.",
+        "expanded-desc":"Tenemos programas de oftalmología, odontología, casos puntuales e investigación para estar atentos y colaborar con la salud de cada niño, niña o jóven de los hogares en los que colaboramos."
+    },
+    "birthday":{
+        "title":"Festejo de cumpleaños",
+        "desc":"Celebramos los cumpleaños de los chicos en los hogares, enviándoles todo lo necesario para que tengan un día especial y se sientan queridos.",
+        "expanded-desc":"Festejamos los cumpleaños de los niños, niñas y jóvenes de los hogares en los que colaboramos, enviándoles todo lo necesario para que tengan un muy lindo día. En esta celebración buscamos dejar una huella en la memoria de los niños y las niñas, buscamos generar un día en el cual ell@s sean el centro, se sientan queridos y especiales."
+    },
+    "campaigns":{
+        "title":"Campañas",
+        "desc":"Organizamos un festejo enfocado en la diversión de los chicos, con juegos y actividades personalizadas para cada hogar (día de la niñez en agosto y navidad en diciembre).",
+        "children-days":{
+            "title":"Día de la niñez",
+            "desc":"Organizamos un festejo en el cual el eje central es la diversión pura de la niñez, con juegos y actividades personalizadas para cada hogar. El objetivo es que en este día, cada niño y niña se sienta reconocido, querido y especial."
+        },
+        "christmas":{
+            "title":"Navidad",
+            "desc":"Todos los niños/as reciben un regalo personalizado gracias a nuestra campaña “sos mamá/papá Noel” , y también realizamos distintas actividades festivas en los hogares (como la visita de mamá y papá Noel). El objetivo de la campaña es acompañar a los chicos, que participen y disfruten de esta festividad tan importante para ellos."
+        }
+    }
+}

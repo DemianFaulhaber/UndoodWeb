@@ -1,0 +1,84 @@
+.vertical-action-card{
+    width: 70vw;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    padding: 4vw;
+    align-items: end;
+}
+
+.vertical-action-card a{
+    position: absolute;
+    padding: 1vw 10vw;
+    font-size: 5vw;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #abd9e9;
+    color: #064d79;
+}
+
+.vertical-info-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 3vw;
+}
+
+.vertical-info-card img{
+    width: 70vw;
+    height: auto;
+}
+
+.card-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.card-info-container h1{
+    background-color: #064d79;
+    color: white;
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    padding: 2vw 10vw;
+    border-radius: 5vw;
+}
+
+@media(min-width:1024px){
+    .vertical-action-card{
+        padding: 1vw;
+        width: 20vw;
+        height: 25vw;
+    }
+    .vertical-action-card a{
+        font-size: 1.5vw;
+        padding: 1vw;
+    }
+    .vertical-info-card{
+        gap: 1vw;   
+    }
+    .vertical-info-card img{
+        width: auto;
+        height: 20vw;
+    }
+    .card-info-container{
+        gap: 0.5vw;
+        max-width: 35vw;
+    }
+    .card-info-container p{
+        font-size: 1vw;
+    }
+    .card-info-container h1{
+        padding: 1vw 3vw;
+        font-size: 1vw;
+    }
+}

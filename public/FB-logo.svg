@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="238.875"
+   zoomAndPan="magnify"
+   viewBox="0 0 179.15625 179.15625"
+   height="238.875"
+   preserveAspectRatio="xMidYMid"
+   version="1.0"
+   id="svg160"
+   sodipodi:docname="20.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview160"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="179.15625"
+       height="179.15625"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs8">
+    <clipPath
+       id="4e757bca07">
+      <path
+         d="m 461.5625,94.898438 h 179.25 V 274.14844 h -179.25 z m 0,0"
+         clip-rule="nonzero"
+         id="path7" />
+    </clipPath>
+    <clipPath
+       id="37a4f91bb5">
+      <path
+         d="m 533,121 h 80 v 153.14844 h -80 z m 0,0"
+         clip-rule="nonzero"
+         id="path8" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#4e757bca07)"
+     id="g159"
+     transform="translate(-461.56253,-94.898437)">
+    <path
+       fill="#404040"
+       d="m 630.82812,274.05469 c 5.46094,0 9.89063,-4.42578 9.89063,-9.88672 V 104.78906 c 0,-5.464841 -4.42969,-9.890622 -9.89063,-9.890622 h -159.3789 c -5.46094,0 -9.88672,4.425781 -9.88672,9.890622 v 159.37891 c 0,5.46094 4.42578,9.88672 9.88672,9.88672 z m 0,0"
+       fill-opacity="1"
+       fill-rule="nonzero"
+       id="path159"
+       style="fill:#0e347d;fill-opacity:1" />
+  </g>
+  <g
+     clip-path="url(#37a4f91bb5)"
+     id="g160"
+     transform="translate(-461.56253,-94.898437)">
+    <path
+       fill="#ffffff"
+       d="m 585.17578,274.05469 v -69.37891 h 23.28906 l 3.48438,-27.03906 H 585.17578 V 160.375 c 0,-7.82813 2.17578,-13.16406 13.39844,-13.16406 l 14.32031,-0.004 v -24.18359 c -2.47656,-0.32813 -10.97656,-1.06641 -20.86328,-1.06641 -20.64453,0 -34.77734,12.60156 -34.77734,35.74219 v 19.9375 h -23.34766 v 27.03906 h 23.34766 v 69.37891 z m 0,0"
+       fill-opacity="1"
+       fill-rule="nonzero"
+       id="path160" />
+  </g>
+</svg>

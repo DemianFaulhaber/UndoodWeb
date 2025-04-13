@@ -1,0 +1,73 @@
+.form-container{
+    margin: 25vw 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.form-container button{
+    padding: 1vw 5vw;
+    background-color: #abd9e9;
+    color: #064d79;
+    border: none;
+    border-radius: 2rem;
+    transition: background-color .2s, color .2s;
+}
+
+.form-container button:hover{
+    cursor: pointer;
+    color: #abd9e9;
+    background-color: #064d79;
+}
+
+.form-article{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    gap: 1vw;
+}
+
+.form-article label{
+    color: #064d79;
+}
+
+.form-article input, textarea{
+    padding: 1.5vw;
+    font-size: 4vw;
+    border: 1px solid #abd9e9;
+    border-radius: 2rem;
+}
+
+h3{
+    font-weight: 300;
+    color: red;
+    font-size: 4vw;
+}
+
+@media(min-width: 1024px){
+    .form-container{
+        margin: 5vw;
+        gap: 1vw;
+    }
+    .form-container button{
+        padding: 0.5vw 2vw;
+        font-size: 1vw;
+    }
+    .form-article{
+        width: auto;
+    }
+    .form-article label{
+        font-size: 1vw;
+    }
+    .form-article input, textarea{
+        font-size: 1vw;
+        width: 25vw;
+        padding: 1vw;
+    }
+    h3{
+        font-size: 1vw;
+    }
+}

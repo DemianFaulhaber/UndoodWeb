@@ -1,0 +1,23 @@
+{
+    "donate":{
+        "title":"Doná",
+        "subtitle":"Ayudanos a financiar el proyecto",
+        "description":"Tu colaboración económica nos permite cubrir los gastos necesarios para continuar con nuestras atividades.",
+        "options":{
+            "monthly":"Aporte mensual",
+            "single":"Aporte único"
+        }
+    },
+    "sponsor":{
+        "title":"Sponsoreá",
+        "subtitle":"Acompañanos con tu empresa",
+        "description":"Si queres que tu empresa forme parte de nuestras alianzas y colaborar con nosotros,",
+        "inside-anchor-text":" escribinos acá."
+    },
+    "join":{
+        "title":"Sumate",
+        "subtitle":"Se parte del equipo",
+        "description":"Si tenes entre 18 y 25 años, vivis en CABA o GBA, y tenes ganas de sumarte a un equipo para hacer un cambio, este es el lugar para vos. ",
+        "inside-anchor-text":"sumate acá"
+    }
+}

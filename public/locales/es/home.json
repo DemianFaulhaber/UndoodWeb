@@ -1,0 +1,15 @@
+{
+    "cards":{
+        "meet-us":"Conocenos",
+        "news":"Novedades",
+        "donate":"Aportá en un click",
+        "contact":"Contactanos",
+        "programs":"Programas"
+    },
+    "impact":{
+        "title":"Impacto",
+        "reach":"130 niños y niñas alcanzados",
+        "shelters":"6 hogares con los que colaboramos",
+        "volunteers":"50 voluntarios trabajando"
+    }
+}
