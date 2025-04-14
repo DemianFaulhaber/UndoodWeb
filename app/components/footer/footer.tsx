@@ -1,10 +1,8 @@
 "use client"
-import { useTranslation } from 'next-i18next'
 import './footer.css'
 import Link from 'next/link'
 
 export default function Footer(){
-    const {t} = useTranslation(['footer'])
 
 
     return(
@@ -25,7 +23,7 @@ export default function Footer(){
                     <a href="#" target='blank'>
                         <img src="mail-logo.svg" alt="mail-logo" />
                     </a>
-                    <p>{t("suscribe")}</p>
+                    <p>Suscribite</p>
                 </div>
                 {/* <div className="contact-us contact-container">
                     <Link to="contact" >

@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import'./navbar.css'
 import Menu from "./menu";
 import { usePathname } from "next/navigation";
-import { useTranslation } from "next-i18next";
-import '../../i18n';
 
 export default function Navbar(){
     const [scrollingUp, setScrollingUp] = useState(true)
@@ -25,8 +23,7 @@ export default function Navbar(){
             window.removeEventListener("scroll", handleScroll);
         };
     },[scrollPos])
-
-    const {t} = useTranslation(['navbar']);    
+ 
     return(
         <article 
         className={`navbar ${

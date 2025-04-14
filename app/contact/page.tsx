@@ -1,14 +1,14 @@
+"use client"
 import { ErrorMessage, Field, Form, Formik } from "formik"
 import * as Yup from "yup";
 import './contact.css'
-import { useTranslation } from "next-i18next";
 
 export default function Contact(){
   
-    const {t} = useTranslation(["contact"])
+    
 
     return(
-        <Formik
+      <Formik
       initialValues={{
         nombre: "",
         email: "",
@@ -22,7 +22,7 @@ export default function Contact(){
           .required("El email es obligatorio"),
         mensaje: Yup.string()
           .min(20, "El mensaje debe tener al menos 20 caracteres")
-          .max(240, t('max-char-passed'))
+          .max(240, "El mensaje no debe superar los 240 caracteres")
           .required("El mensaje es obligatorio"),
       })}
       onSubmit={(values, { resetForm }) => {

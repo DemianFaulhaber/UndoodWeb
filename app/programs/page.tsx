@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useTranslation } from "next-i18next";
 import { InfoCard } from "../components/cards/cards";
 import Link from "next/link";
 import './programs.css'
@@ -21,47 +19,42 @@ function Program(props:any){
 }
 
 export default function Programs(){
-	const {t} = useTranslation(['programs'])
-	const [program, setProgram] = useState("")
 
-
-
-	if(!program){
 		return(
 			<>
-				<h1 className="programs-title">{t("main-title")}</h1>
+				<h1 className="programs-title">"Conocé nuestros programas y actividades"</h1>
 				<div className="programs-banner">
 					<div className="program-card">
 						<img className="card-icon" src="pallete.svg" alt="" />
 						<InfoCard 
 							imgDir={"recreative-afternoons-main.png"} 
-							title={t("recreative-afternoons.title")} 
-							info={t("recreative-afternoons.desc")} 
-							onClick={() => setProgram("recreative")} 
+							title="Tardes Recreativas"
+							info="Vamos de visita al hogar de los niños, niñas y jóvenes quienes nos invitan a compartir una tarde de risas, juegos y actividades pensadas específicamente a raiz de sus gustos e intereses. "
+							
 							personalizedContentClass="program-card"
 						/>
 					</div>
-					<div className="program-card">
+					{/* <div className="program-card">
 						<img className="card-icon" src="health-ico.svg" alt="" />
 						<InfoCard 
 							imgDir={"birthday-main.png"} 
-							title={t("health.title")} 
+							title="Programas de salud" 
 							info={t("health.desc")} 
 							onClick={() => setProgram("health")} 
 							personalizedContentClass="program-card"
 						/>
-						</div>
+					</div> */}
 					<div className="program-card">
 						<img src="balloons-ico.svg" alt="" className="card-icon" />
 						<InfoCard 
 							imgDir={"health-main.png"} 
-							title={t("birthday.title")} 
-							info={t("birthday.desc")} 
-							onClick={() => setProgram("birthday")} 
+							title="Festejo de cumpleaños"
+							info="Celebramos los cumpleaños de los chicos en los hogares, enviándoles todo lo necesario para que tengan un día especial y se sientan queridos."
+							
 							personalizedContentClass="program-card"
 						/>
 					</div>
-					<div className="program-card">
+					{/* <div className="program-card">
 						<img src="gift-ico.svg" alt="" className="card-icon" />
 						<InfoCard 
 							imgDir={"campaigns-main.png"} 
@@ -70,66 +63,14 @@ export default function Programs(){
 							onClick={() => setProgram("campaigns")} 
 							personalizedContentClass="program-card"
 						/>
-					</div>
+					</div> */}
 				</div>
 				<div className="programs-nav">
-					<Link href={"/colaborate"} className="colaborate-redirect">{t("colaborate-button")}</Link>
+					<Link href={"/colaborate"} className="colaborate-redirect">
+						Cómo Colaborar
+					</Link>
 				</div>
 			</>
 	)
-	}
-	else{
-		return(
-			<>
-				{(() => { 
-						switch(program){
-							case "recreative":
-								return(
-									<Program
-										title={t("recreative-afternoons.title")}
-										imgDir="recreative-afternoons-secondary.png"
-										desc={t("recreative-afternoons.expanded-desc")}
-									/>
-								)
-							case "health":
-								return(
-									<Program
-										title={t("health.title")}
-										imgDir="health-secondary.png"
-										desc={t("health.expanded-desc")}
-									/>
-								)
-							case "birthday":
-								return(
-									<Program
-										title={t("birthday.title")}
-										imgDir="birthday-secondary.png"
-										desc={t("birthday.expanded-desc")}
-									/>
-								)
-							case "campaigns":
-								return(
-									<article className="campaigns">
-										<div className="campaign">
-											<h1 className="campaign-title">{t("campaigns.children-days.title")}</h1>
-											<img src="children-day.png" alt="" />
-											<p className="campaign-desc">{t("campaigns.children-days.desc")}</p>
-										</div>
-										<div className="campaign">
-											<h1 className="campaign-title">{t("campaigns.christmas.title")}</h1>
-											<img src="christmas.png" alt="" />
-											<p className="campaign-desc">{t("campaigns.christmas.desc")}</p>
-										</div>
-									</article>
-								)
-						}
-			})()}
-			<nav className="programs-nav">
-				<Link href={"/colaborate"} className="colaborate-redirect">{t("colaborate-button")}</Link>
-				<button onClick={() => setProgram("")}>ver más</button>
-			</nav>
-		</>
-		)
-	}
-
 }
+

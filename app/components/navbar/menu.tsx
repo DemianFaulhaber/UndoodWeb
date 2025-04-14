@@ -1,7 +1,6 @@
 "use client"
 import React, {ReactNode, useEffect} from "react"
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
 
 type MenuProps = {
     isOpen:boolean,
@@ -11,10 +10,9 @@ type MenuProps = {
 }
 
 export default function Menu({isOpen, location, closeMenu, setMenuOpen}:MenuProps){
-    const {t} = useTranslation("navbar")
     useEffect(() => {
         if (isOpen) {
-            document.documentElement.style.overflow = "hidden"; // Bloquea scroll en toda la página
+            document.documentElement.style.overflow = "visible"; // Bloquea scroll en toda la página
             document.body.style.overflow = "hidden";
         } else {
             document.documentElement.style.overflow = "";
@@ -47,12 +45,12 @@ export default function Menu({isOpen, location, closeMenu, setMenuOpen}:MenuProp
                     onClick={(() => setMenuOpen(false))}
                     style={{color:location === "/" ? "white": "#064d79"}}
                     >
-                        {t("links.Home")}
+                    Inicio
                     </Link>
                     <Link href="about" onClick={(() => setMenuOpen(false))}
                     style={{color:location === "/about" ? "white": "#064d79"}}
                     >
-                        {t("links.About-us")}
+                    Nosotros
                     </Link>
                     {/* <Link href="news" onClick={(() => setMenuOpen(false))}
                     style={{color:location === "/news" ? "white": "#064d79"}}
@@ -62,17 +60,17 @@ export default function Menu({isOpen, location, closeMenu, setMenuOpen}:MenuProp
                     <Link href="colaborate" onClick={(() => setMenuOpen(false))}
                     style={{color:location === "/colaborate" ? "white": "#064d79"}}
                     >
-                        {t("links.Colaborate")}
+                    Sumate
                     </Link>    
                     <Link href="programs" onClick={(() => setMenuOpen(false))}
                     style={{color:location === "/programs" ? "white": "#064d79"}}
                     >
-                        {t("links.Programs")}
+                    Programas
                     </Link>    
                     <Link href="contact" onClick={(() => setMenuOpen(false))}
                     style={{color:location === "/contact" ? "white": "#064d79"}}
                     >
-                        {t("links.Contact")}
+                    Contacto
                     </Link>    
                 </nav>
             </div>
