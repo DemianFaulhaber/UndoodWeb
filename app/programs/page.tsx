@@ -2,22 +2,6 @@ import { InfoCard } from "../components/cards/cards";
 import Link from "next/link";
 import './programs.css'
 
-function Program(props:any){
-	return(
-		<>
-			<article className="program">
-				<h1 className="program-title">{props.title}</h1>
-				<div className="program-data">
-					<img src={props.imgDir} alt="" />
-					<p>
-						{props.desc}
-					</p>
-				</div>
-			</article>
-		</>
-	)
-}
-
 export default function Programs(){
 
 		return(
