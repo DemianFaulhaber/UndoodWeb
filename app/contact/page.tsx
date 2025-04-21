@@ -3,12 +3,9 @@ import { ErrorMessage, Field, Form, Formik } from "formik"
 import * as Yup from "yup";
 import './contact.css'
 
-export default function Contact(){
-  
-    
-
-    return(
-      <Formik
+export default function Contact() {
+  return (
+    <Formik
       initialValues={{
         nombre: "",
         email: "",
@@ -25,35 +22,84 @@ export default function Contact(){
           .max(240, "El mensaje no debe superar los 240 caracteres")
           .required("El mensaje es obligatorio"),
       })}
-      onSubmit={(values, { resetForm }) => {
-        console.log("Datos enviados:", values);
-        alert("Formulario enviado con éxito");
-        resetForm();
+      onSubmit={async (values, { resetForm, setSubmitting }) => {
+        try {
+          // Deshabilitar el botón de envío
+          setSubmitting(true);
+
+          // Realizar la solicitud POST al backend
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(values), // Los datos del formulario
+          });
+
+          if (!response.ok) {
+            throw new Error('Hubo un problema con el envío');
+          }
+
+          // Si el envío fue exitoso
+          alert("Formulario enviado con éxito");
+          resetForm();
+        } catch (error) {
+          console.error('Error al enviar el formulario:', error);
+          alert("Hubo un error, por favor intenta nuevamente.");
+        } finally {
+          // Volver a habilitar el botón de envío
+          setSubmitting(false);
+        }
       }}
     >
-      {({ isSubmitting }) => (
-        <Form className="form-container">
+      {({ values, handleSubmit, handleChange, handleBlur, isSubmitting }) => (
+        <Form className="form-container" onSubmit={handleSubmit}>
           <div className="form-article">
             <label>Nombre</label>
-            <Field type="text" name="nombre" />
+            <Field
+              type="text"
+              name="nombre"
+              value={values.nombre}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
             <ErrorMessage name="nombre" component="h3" />
           </div>
 
           <div className="form-article">
             <label>Email</label>
-            <Field type="email" name="email" />
+            <Field
+              type="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
             <ErrorMessage name="email" component="h3" />
           </div>
 
           <div className="form-article">
             <label>Asunto</label>
-            <Field type="text" name="asunto" />
+            <Field
+              type="text"
+              name="asunto"
+              value={values.asunto}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
             <ErrorMessage name="asunto" component="h3" />
           </div>
 
           <div className="form-article">
             <label>Mensaje</label>
-            <Field as="textarea" name="mensaje" rows="4" />
+            <Field
+              as="textarea"
+              name="mensaje"
+              rows="4"
+              value={values.mensaje}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
             <ErrorMessage name="mensaje" component="h3" />
           </div>
 
@@ -63,5 +109,5 @@ export default function Contact(){
         </Form>
       )}
     </Formik>
-    )
+  );
 }

@@ -18,7 +18,7 @@ export default function Footer(){
                     <img src="FB-logo.svg" alt="social-link-logo" />
                 </a>
             </div>
-            <div className="contact">
+            {/* <div className="contact">
                 <div className="suscribe contact-container">
                     <a href="#" target='blank'>
                         <img src="mail-logo.svg" alt="mail-logo" />
@@ -30,8 +30,8 @@ export default function Footer(){
                         <img src="contact-icon.svg" alt="contact-logo" />
                     </Link>
                     <p>{t("contact-us")}</p>
-                </div> */}
-            </div>
+                </div> 
+            </div> */}
         </footer>
     )   
 }

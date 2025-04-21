@@ -15,31 +15,38 @@
     gap: 1vw;
 }
 
-.colaborate-card-banner h2, p{
+.colaborate-card-banner h3, p{
     color: #064d79;
 }
 
-.donations-redirect{
+.colaborate-redirect{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
     gap: 5vw;
 }
 
-.colaboration-redirect{
+.colaborate-redirect a{
     color: #064d79;
-    background-color: #abd9e9;
-    padding: 3vw 5vw;
-    border-radius: 5vw;
-    cursor: pointer;
-    transition: background-color .2s ease-in-out, color .2s;
+    font-weight: bold;
+    font-size: 5vw;
 }
 
-.colaboration-redirect:hover{
-    background-color:#064d79;
-    color: white;
-    border-color: #abd9e9;
+.colaborate-redirect a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #abd9e9;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
 }
+
+.colaborate-redirect a:hover::after{
+    transform: scaleX(1);
+}
+
 
 a{
     text-decoration: none;
@@ -48,16 +55,34 @@ a{
 @media(min-width:1024px){
     .colaborate-card-banner{
         margin: 5vw 0;
-        flex-direction: row;
-        gap: 1vw;
-        align-items: baseline;
+        flex-direction: column;
+        gap: 5vw;
+        align-items: center;
     }
-    .colaboration-redirect{
-        padding: 1vw ;
+    .colaborate-redirect{
+        justify-content: flex-start!important;
+        width: auto;
+    }
+    .colaborate-redirect a{
         font-size: 1.5vw;
     }
-    .donations-redirect{
+    .horizontal-card{
+        flex-direction: row;
+    }
+    .horizontal-card div{
+        align-items: flex-start;
         justify-content: space-between;
-
+        max-width: 50vw;
+        height: auto;
+    }
+    .horizontal-card div h2{
+        font-size: 3vw;
+        text-decoration: underline #abd9e9;
+        background: none;
+        padding: 0;
+        color: #064d79;
+    }
+    .horizontal-card p{
+        font-size: 1.5vw;
     }
 }

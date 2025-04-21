@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import './cards.css'
+import React, { ReactNode } from 'react'
 
 type LinkCardProps={
     imgDir:string,
@@ -29,19 +30,21 @@ type InfoCardProps = {
     target?:string,
     insideAnchorLink?:string,
     personalizedContentClass?:string,
+    children?:ReactNode,
     onClick?: () => void
 }
 
-function InfoCard({onClick,personalizedContentClass,imgDir,title,info,insideAnchorText,insideAnchorLink,target,subtitle}:InfoCardProps){
+function InfoCard({onClick,children,personalizedContentClass,imgDir,title,info,insideAnchorText,insideAnchorLink,target,subtitle}:InfoCardProps){
     return(
         <>
             <article 
-            className={`vertical-info-card  ${personalizedContentClass}`}>
-                <img onClick={onClick} src={imgDir} alt="" />
+            className={`vertical-info-card  ${personalizedContentClass}`} >
+                <img onClick={onClick} src={imgDir} alt="" id={`${imgDir}-card`}/>
                 <div className={`card-info-container`}>
-                    <h1>{title}</h1>
-                    <h2>{subtitle}</h2>
+                    <h2>{title}</h2>
+                    <h3>{subtitle}</h3>
                     <p>{info}{insideAnchorLink ? <Link href={insideAnchorLink} target={target}>{insideAnchorText}</Link>: ""}</p>
+                    {children}
                 </div>
             </article>
         </>
