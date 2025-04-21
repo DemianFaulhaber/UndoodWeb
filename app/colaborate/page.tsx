@@ -18,8 +18,8 @@ export default function Colaborate(){
                 personalizedContentClass="horizontal-card"
             >
                 <div className="colaborate-redirect">
-                    <a href="https://link.mercadopago.com.ar/colaboracion3000">Donación Única</a>
-                    <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847379c3410173a5bad04f4caf&fbclid=PAZXh0bgNhZW0CMTEAAafa6WzcI3uFjEejt6Tq55KYQnDucawTUek4N-TuH-Lg4QsTIrCmCeQ8S-LMxw_aem_f6Pr-A0dLvP-tXOf7uSxpQ">Donación Periódica</a>
+                    <a className="active-underline" href="https://link.mercadopago.com.ar/colaboracion3000">Donación Única</a>
+                    <a className="active-underline" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847379c3410173a5bad04f4caf&fbclid=PAZXh0bgNhZW0CMTEAAafa6WzcI3uFjEejt6Tq55KYQnDucawTUek4N-TuH-Lg4QsTIrCmCeQ8S-LMxw_aem_f6Pr-A0dLvP-tXOf7uSxpQ">Donación Periódica</a>
                 </div>
             </InfoCard>
         </div>
@@ -32,7 +32,7 @@ export default function Colaborate(){
             personalizedContentClass="horizontal-card"
         >
             <div className="colaborate-redirect">
-                <a href="https://wa.me/5491130219151">Contactanos</a>
+                <a className="active-underline" href="https://wa.me/5491130219151">Contactanos</a>
             </div>
         </InfoCard>
         <InfoCard 
@@ -43,7 +43,7 @@ export default function Colaborate(){
             personalizedContentClass="horizontal-card"
         >
             <div className="colaborate-redirect">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDI7JtpnmIO5_TP05wg5Z63MJYZkjCjx6M9RS6RaKUeR9riw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadXcH2ebLMIyYzzJ8dTn7bgTOOdlHb-I_HEvNNrV-uScxTdMlu3bVn-MJheuQ_aem_RRI002_fT2qhRAOG6HMDbA">Sumate</a>
+                    <a className="active-underline" href="https://docs.google.com/forms/d/e/1FAIpQLSeDI7JtpnmIO5_TP05wg5Z63MJYZkjCjx6M9RS6RaKUeR9riw/viewform?fbclid=PAZXh0bgNhZW0CMTEAAadXcH2ebLMIyYzzJ8dTn7bgTOOdlHb-I_HEvNNrV-uScxTdMlu3bVn-MJheuQ_aem_RRI002_fT2qhRAOG6HMDbA">Sumate</a>
             </div>
         </InfoCard>
     </div>

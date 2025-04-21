@@ -33,7 +33,7 @@
     font-size: 5vw;
 }
 
-.colaborate-redirect a::after{
+.active-underline::after{
     content: '';
     display: block;
     width: 100%;
@@ -43,7 +43,7 @@
     transition: transform .2s ease-in-out;
 }
 
-.colaborate-redirect a:hover::after{
+.active-underline:hover::after{
     transform: scaleX(1);
 }
 
