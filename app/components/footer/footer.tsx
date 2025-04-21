@@ -14,7 +14,7 @@ export default function Footer(){
                 <a href="https://www.linkedin.com/company/undood-argentina/" className="social-link" target='blank'>
                     <img src="linkedin-logo.svg" alt="social-link-logo" />
                 </a>
-                <a href="#" className="social-link" target='blank'>
+                <a href="https://www.facebook.com/p/Undood-Argentina-100066960061649/" className="social-link" target='blank'>
                     <img src="FB-logo.svg" alt="social-link-logo" />
                 </a>
             </div>
