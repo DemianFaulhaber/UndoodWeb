@@ -1,6 +1,5 @@
 import { InfoCard } from "../components/cards/cards";
 import './colaborate.css'
-import Link  from "next/link";
 
 
 export default function Colaborate(){
