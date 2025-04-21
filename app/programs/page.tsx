@@ -76,7 +76,7 @@ export default function Programs(){
 					</article>
 				</div>
 				<div className="programs-nav">
-					<Link href={"/colaborate"} className="colaborate-redirect">
+					<Link href={"/colaborate"} className="redirect-programs">
 						Cómo Colaborar
 					</Link>
 				</div>
