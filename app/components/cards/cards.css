@@ -27,7 +27,8 @@
     align-items: center;
     flex-direction: column;
     text-align: left;
-    gap: 3vw;
+    position: relative;
+    gap: 5vw;
     width: 70vw;
 }
 
@@ -41,7 +42,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1vw;
+    gap: 2vw;
+    text-align: justify;
 }
 
 .card-info-container h2{

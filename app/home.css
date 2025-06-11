@@ -3,7 +3,6 @@
     justify-content: center;
     gap: 10vw;
     margin-bottom: 10vw;
-    margin-top: 20vw;
 }
 
 
@@ -33,6 +32,22 @@
     gap: 5vw;
 }
 
+.introduction{
+    margin: 20vw 7vw 10vw;
+    color: #064d79;
+}
+
+.introduction h1{
+    text-align: center;
+    font-size: 6vw;
+    margin-bottom: 3vw;
+}
+
+.introduction p{
+    font-size: 5vw;
+    text-align: left;
+}
+
 @media(min-width:1024px){
     .card-banner{
         margin-top: 2vw;
@@ -56,5 +71,15 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .introduction{
+        margin: 3vw 5vw;
+    }
+    .introduction h1{
+        font-size: 2.5vw;
+        margin-bottom: 1vw;
+    }
+    .introduction p{
+        font-size: 1.2vw;
     }
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import './cards.css'
 import React, { ReactNode } from 'react'
+import Image from 'next/image'
 
 type LinkCardProps={
     imgDir:string,
@@ -39,7 +40,7 @@ function InfoCard({onClick,children,personalizedContentClass,imgDir,title,info,i
         <>
             <article 
             className={`vertical-info-card  ${personalizedContentClass}`} >
-                <img onClick={onClick} src={imgDir} alt="" id={`${imgDir}-card`}/>
+                <Image onClick={onClick} src={`/${imgDir}`} alt="" id={`${imgDir}-card`} width={1200} height={800}/>
                 <div className={`card-info-container`}>
                     <h2>{title}</h2>
                     <h3>{subtitle}</h3>

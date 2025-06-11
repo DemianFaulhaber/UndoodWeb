@@ -57,8 +57,8 @@ export default function Menu({isOpen, location, closeMenu, setMenuOpen}:MenuProp
                     >
                     {t("links.News")}
                     </Link>     */}
-                    <Link href="colaborate" onClick={(() => setMenuOpen(false))}
-                    style={{color:location === "/colaborate" ? "white": "#064d79"}}
+                    <Link href="collaborate" onClick={(() => setMenuOpen(false))}
+                    style={{color:location === "/collaborate" ? "white": "#064d79"}}
                     >
                     Sumate
                     </Link>    

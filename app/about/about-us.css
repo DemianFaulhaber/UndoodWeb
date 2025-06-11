@@ -61,6 +61,12 @@
     text-align: center;
     color: #064d79;
 }
+.team h1{
+    font-weight: 500;
+}
+.team h2{
+    font-weight: 250;
+}
 .coord{
     display: flex;
     align-items: center;
@@ -68,6 +74,7 @@
 }
 .coord img{
     width: 50%;
+    height: auto;
 }
 
 .comision .title{
@@ -80,6 +87,10 @@
     text-align: end;
 }
 
+.about-title{
+    font-size: 7vw;
+}
+
 @media(min-width:1024px){
     .about-us{
         margin-top: 5vw;
@@ -88,6 +99,9 @@
     .about-us a{
         color: #064d79;
         text-decoration: underline;
+    }
+    .about-title{
+        font-size: 2.5vw;
     }
     .comision h2{
         text-align: left;

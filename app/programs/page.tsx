@@ -9,10 +9,10 @@ export default function Programs(){
 				<h1 className="programs-title">Conocé nuestros programas y actividades</h1>
 				<div className="programs-banner">
 					<article className="multiple-programs">
-						<h1>Programas de salud</h1>
+						<h1 className="programs-category-title">Programas de salud</h1>
 						<div className="program-card">
 							<InfoCard 
-								imgDir={"health-main.png"} 
+								imgDir={"dentistry.jpg"} 
 								title="Odontología Preventiva" 
 								info="¡El 90% de las enfermedades bucales se previenen con un correcto cepillado de dientes! Visitamos los hogares en labor preventiva entregando kits de cepillado de dientes asi como conscientizando sobre la salud bucal." 
 								personalizedContentClass="program-card"
@@ -20,63 +20,63 @@ export default function Programs(){
 						</div>
 						<div className="program-card">
 							<InfoCard 
-								imgDir={"birthday-main.png"} 
+								imgDir={"ophtalmology.jpg"} 
 								title="Oftalmología" 
-								info="Realizamos controles oftalmolgoicos anuales a fin de poder proporcionar anteojos o intervenciones quirurjicas a quienes lo precisen. ¡Garantizamos un chequeo anual a todos los niños y niñas de los hogares!" 
+								info="Realizamos controles oftalmológicos anuales a fin de poder proporcionar anteojos o intervenciones quirúrgicas a quienes lo precisen. ¡Garantizamos un chequeo anual a todos los niños y niñas de los hogares!" 
 								personalizedContentClass="program-card"
 							/>
 						</div>
 						<div className="program-card">
 							<InfoCard 
-								imgDir={"birthday-main.png"} 
+								imgDir={"specific_cases.jpeg"} 
 								title="Casos Puntuales" 
-								info="¡gracias a nuestros partners medicos podemos conectar a los niños y niñas de los hogares con alguna situación puntual con profesionales dispuesto a atenderlos de forma ad honorem!" 
+								info="¡Gracias a nuestros partners médicos podemos conectar a los niños y niñas de los hogares con alguna situación puntual, con profesionales dispuestos a atenderlos de forma ad honorem!" 
 								personalizedContentClass="program-card"
 							/>
 						</div>
 					</article>
 					<article className="multiple-programs">
-						<h1>Campañas</h1>
+						<h1 className="programs-category-title">Campañas</h1>
 						<article className="program-card">
 							<InfoCard 
-								imgDir={"recreative-afternoons-main.png"} 
+								imgDir={"recreative-afternoons-main.jpg"} 
 								title="Tardes Recreativas"
-								info="Vamos de visita al hogar de los niños, niñas y jóvenes quienes nos invitan a compartir una tarde de risas, juegos y actividades pensadas específicamente a raiz de sus gustos e intereses. "
+								info="Vamos de visita al hogar de los niños, niñas y adolescentes quienes nos invitan a compartir una tarde de risas, juegos y actividades pensadas específicamente a raiz de sus gustos e intereses. "
 								
 								personalizedContentClass="program-card"
 							/>
 						</article>
 						<div className="program-card">
 							<InfoCard 
-								imgDir={"campaigns-main.png"} 
+								imgDir={"childrens_day.jpg"} 
 								title="Día de la niñez"
-								info="Durante todo el mes de Agosto festejamos el dia de la niñez generando festejos, eventos, salidas y programas que hagan sentir a los niños y niñas los protagonistas recordando que lo esencial en sus vidas es el derecho de disfrutar de una niñez en plenitud."
+								info="Durante todo el mes de Agosto festejamos el día de la niñez. Generando festejos, eventos, salidas y programas que hagan sentir a los niños y niñas los protagonistas, recordando que lo esencial en sus vidas es el derecho de disfrutar de una niñez en plenitud."
 								personalizedContentClass="program-card"
 							/>
 						</div>
 						<div className="program-card">
 							<InfoCard 
-								imgDir={"birthday-main.png"} 
+								imgDir={"birthday.jpg"} 
 								title="Festejo de Cumpleaños"
-								info="Festejamos los cumpleaños de los niños, niñas y jóvenes de los hogares en los que
-								colaboramos, enviándoles todo lo necesario para que tengan un muy lindo día. En esta
-								celebración buscamos dejar una huella en la memoria de los niños y las niñas, buscamos
-								generar un día en el cual ell@s sean el centro, se sientan queridos y especiales."
+								info="Festejamos los cumpleaños de los niños, niñas y adolescentes de los hogares en los que
+								colaboramos, enviándoles todo lo necesario para que tengan día especial. En esta
+								celebración buscamos dejar una huella en la memoria de los niños y las niñas, con el fin de
+								generar un día en el cual ellos sean el centro, se sientan queridos y especiales."
 								personalizedContentClass="program-card"
 							/>
 						</div>
 						<div className="program-card">
 							<InfoCard 
-								imgDir={"campaigns-main.png"} 
-								title="Festejo de Cumpleaños"
-								info='¡Festejamos la navidad de la mano de los niños y niñas de los hogares! Cada niño recibe un regalo perosnalizado que surge como resultado de la campaña "Convertite en Papa/Mama Noel". Además, ofrecemos una serie de eventos tematicos que nos permiten introducirnos de lleno en el espiritu navideño'
+								imgDir={"christmas.jpg"} 
+								title="Campaña Navideña"
+								info='¡Festejamos la navidad de la mano de los niños y niñas de los hogares! Cada niño recibe un regalo personalizado que surge como resultado de la campaña "Convertite en Papá/Mamá Noel". Además, ofrecemos una serie de eventos temáticos que nos permiten introducirnos de lleno en el espíritu navideño. Esta campaña alcanza a más de 120 niños y niñas en 5 hogares de tránsito'
 								personalizedContentClass="program-card"
 							/>
 						</div>
 					</article>
 				</div>
 				<div className="programs-nav">
-					<Link href={"/colaborate"} className="redirect-programs">
+					<Link href={"/collaborate"} className="redirect-programs">
 						Cómo Colaborar
 					</Link>
 				</div>

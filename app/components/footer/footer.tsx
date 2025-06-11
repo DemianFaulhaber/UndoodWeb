@@ -16,6 +16,9 @@ export default function Footer(){
                 <a href="https://www.facebook.com/p/Undood-Argentina-100066960061649/" className="social-link" target='blank'>
                     <img src="FB-logo.svg" alt="social-link-logo" />
                 </a>
+                <a href="https://ideali.st/bFsI8h" className="social-link" target='blank'>
+                    <img src="idealist-logo.png" alt="social-link-logo" />
+                </a>
             </div>
             {/* <div className="contact">
                 <div className="suscribe contact-container">
