@@ -17,6 +17,7 @@ export default async function Home(){
             <LinkCard imgDir="home_image04.jpg" linkText="Programas" page="/programs"/>
             <LinkCard imgDir="home_image02.jpg" linkText="Contactanos" page="/contact"/>
         </article>
+        
         <article className="impact-grid">
             <h1 style={{fontSize:"2.5vw"}}>Impacto</h1>
             <div className="items">
