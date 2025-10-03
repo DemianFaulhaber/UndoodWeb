@@ -32,46 +32,67 @@ export default function Menu({isOpen, location, closeMenu, setMenuOpen}:MenuProp
         <div 
         className={`menu-background ${isOpen?'menu-visible':'menu-hide'}`}
         onClick={closeMenu}
-        style={{"opacity":isOpen?'50%':'0'}}
+        style={{"opacity":isOpen?'75%':'0'}}
         ></div>
         <div 
         className={`menu-container ${isOpen?'menu-visible':'menu-hide'}`}
         >
             <div className="menu">
             <img src="logo.svg" alt="logo" />
-                <nav className="links">    
-                    <Link 
-                    href="/" 
-                    onClick={(() => setMenuOpen(false))}
-                    style={{color:location === "/" ? "white": "#064d79"}}
-                    >
-                    Inicio
-                    </Link>
-                    <Link href="about" onClick={(() => setMenuOpen(false))}
-                    style={{color:location === "/about" ? "white": "#064d79"}}
-                    >
-                    Nosotros
-                    </Link>
+                <nav className="links">
+                    <div className="n-link">
+                        <Link 
+                        href="/" 
+                        onClick={(() => setMenuOpen(false))}
+                        className={location === "/" ? "current-page" : undefined}
+                        >
+                        Inicio
+                        </Link>
+                    </div>    
+                    <div className="n-link">
+                        <Link href="/about" 
+                        onClick={(() => setMenuOpen(false))}
+                        className={location === "/about" ? "current-page" : undefined}
+                        >
+                        Nosotros
+                        </Link>
+                    </div>
                     {/* <Link href="news" onClick={(() => setMenuOpen(false))}
                     style={{color:location === "/news" ? "white": "#064d79"}}
                     >
                     {t("links.News")}
                     </Link>     */}
-                    <Link href="collaborate" onClick={(() => setMenuOpen(false))}
-                    style={{color:location === "/collaborate" ? "white": "#064d79"}}
-                    >
-                    Sumate
-                    </Link>    
-                    <Link href="programs" onClick={(() => setMenuOpen(false))}
-                    style={{color:location === "/programs" ? "white": "#064d79"}}
-                    >
-                    Programas
-                    </Link>    
-                    <Link href="contact" onClick={(() => setMenuOpen(false))}
-                    style={{color:location === "/contact" ? "white": "#064d79"}}
-                    >
-                    Contacto
-                    </Link>    
+                    <div className="n-link">
+                        <Link href="/collaborate" onClick={(() => setMenuOpen(false))}
+                        className={location.includes("/collaborate") ? "current-page" : undefined}
+                        >
+                        Sumate
+                        </Link>
+                    </div>    
+                    <div className="n-link">
+                        <Link href="/programs" onClick={(() => setMenuOpen(false))}
+                        className={location.includes("/programs") ? "current-page" : undefined}
+                        >
+                        Programas
+                        </Link>
+                        <div className="sub-prog-links">
+                            <Link href="/programs/health"
+                            onClick={(() => setMenuOpen(false))}
+                            className={location === "/programs/health" ? "current-page" : undefined}
+                            >Programas de Salud</Link>
+                            <Link href="/programs/campaigns"
+                            onClick={(() => setMenuOpen(false))}
+                            className={location === "/programs/campaigns" ? "current-page" : undefined}
+                            >Campañas</Link>
+                        </div>
+                    </div>    
+                    <div className="n-link">
+                        <Link href="/contact" onClick={(() => setMenuOpen(false))}
+                        className={location === "/contact" ? "current-page" : undefined}
+                        >
+                        Contacto
+                        </Link>
+                    </div>    
                 </nav>
             </div>
         </div>

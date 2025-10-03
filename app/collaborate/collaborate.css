@@ -1,88 +1,372 @@
-.collaborate-card-banner{
+.collaborate-header-img{
+    height: auto;
+}
+.collaborate-header header{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 10vw;
-    margin: 20vw 10vw;
+    gap: 2vw;
+    padding: 15vw 10vw;
+    margin-top: 15vw;
+    color: #064e7aff;
 }
 
-.donations{
+.donations article{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
+    gap: 5vw;
+    padding: 15vw 10vw;
+    background-color: #064e7aff;
+    color: white;
+    margin-top: -5px;
 }
 
-.collaborate-card-banner h3, p{
-    color: #064d79;
-}
-
-.collaborate-redirect{
+.sponsors article{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 15vw 10vw;
+    background-color: #137ebeff;
+    color: white;
+    margin-top: -5px;
+}
+
+.join article{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 15vw 10vw;
+    background-color: #231f20ff;
+    color: white;
+    margin-top: -5px;
+
+}
+
+.coll-buttons{
+    padding: 2vw 5vw;
+    border: 2px solid;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    font-size: 4vw;
+    transition: .2s background-color .2s color;
+    font-weight: 600;
+}
+
+.coll-buttons:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.coll-buttons:active{
+    background-color: rgba(255, 255, 255);
+    color: black;
+    border: 2px solid white;
+}
+
+.donate-links{
+    display: flex;
+    flex-direction: column;
     gap: 5vw;
 }
 
-.collaborate-redirect a{
-    color: #064d79;
-    font-weight: bold;
+.collaborate-section-title{
+    font-size: 8vw;
+    /* margin-bottom: 5vw; */
+}
+
+.collaborate-section-text{
+    font-size: 4.5vw;
+}
+
+.join-header{
+    margin-top: 15vw;
+}
+
+.join-header header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    padding: 15vw 10vw;
+    color: #064e7aff;
+}
+
+.join-header img{
+    height: auto;
+}
+
+.section-benefits article{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 15vw 10vw;
+    background-color: #137ebeff;
+    color: white;
+    margin-top: -5px;
+}
+
+.section-values{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vw;
+}
+
+.values{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 10vw 10vw;
+    color: black;
+    margin-top: -5px;
+}
+
+.section-testimonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15vw 10vw;
+    background-color: #231f20ff;
+    color: white;
+    margin-top: -5px;
+}
+
+.testimonials-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+}
+
+.testimonials-container h2{
+    font-size: 6vw;
+    margin-bottom: 5vw;
+}
+
+.section-testimonials article{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+.testimonials-title-desktop{
+    display: none;
+}
+
+.testimonials-footer{
+    margin-bottom: 5vw;
+}
+
+.testimonials-footer h3{
+    font-weight: 100;
     font-size: 5vw;
 }
 
-.active-underline::after{
-    content: '';
-    display: block;
+.values-items{
     width: 100%;
-    height: 2px;
-    background-color: #abd9e9;
-    transform: scaleX(0);
-    transition: transform .2s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 5vw; */
+    gap: 5vw;
+    justify-content: center;
+    /* flex-direction: row; */
 }
 
-.active-underline:hover::after{
-    transform: scaleX(1);
+.values-item{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 5vw;
+    gap: 5vw;
+}
+
+.values-item img{
+    height: auto;
+    width: 20vw;
+}
+
+.values-item-text{
+    width: 100%;
+}
+
+.values-item-text h2{
+    color: #064e7aff;
+}
+
+.values-item-text p{
+    color: #137ebeff;
+    font-weight: 600;
 }
 
 
-a{
-    text-decoration: none;
-}
-
-@media(min-width:1024px){
-    .collaborate-card-banner{
-        margin: 5vw 0;
-        flex-direction: column;
-        gap: 5vw;
-        align-items: center;
-    }
-    .collaborate-redirect{
-        justify-content: flex-start!important;
-        width: auto;
-    }
-    .collaborate-redirect a{
-        font-size: 1.5vw;
-    }
-    .horizontal-card{
-        flex-direction: row;
-    }
-    .horizontal-card div{
+@media (min-width:1024px){
+    .collaborate-header header{
+        margin: 0;
+        padding: 5vw 10vw;
         align-items: flex-start;
-        justify-content: space-between;
-        max-width: 50vw;
-        height: auto;
+        width: 80vw;
     }
-    .horizontal-card div h2{
+    .collaborate-section-title{
+        font-size: 4vw;
+    }
+    .collaborate-section-text{
+        font-size: 2vw;
+    }
+    .donations{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    .donations img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .donations article{
+        padding: 5vw 7vw;
+        gap: 2vw;
+    }
+    .collaborate-section-title{
         font-size: 3vw;
-        text-decoration: underline #abd9e9;
-        background: none;
-        padding: 0;
-        color: #064d79;
     }
-    .horizontal-card p{
+    .donate-links{
+        flex-direction: row;
+        gap: 2vw;
+        text-align: center;
+    }
+    .coll-buttons{
+        font-size: 2vw;
+        padding: 1vw 2vw; 
+    }
+    
+    .sponsors{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .sponsors img{
+        order: 2;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .sponsors article{
+        padding: 7vw 7vw;
+        gap: 2vw;
+    }
+    .join{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    .join img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .join article{
+        padding: 7vw 7vw;
+        gap: 2vw;
+    }
+    /* Join page */
+    .join-header{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 45% 55%;
+        max-height: 50vw;
+        overflow: hidden;
+    }
+    .join-header img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        order: 2;
+    }
+    .join-header header{
+        align-items: flex-start;
+        padding: 5vw 7vw;
+        gap: 1vw;
+    }
+    .join-header h1{
+        font-size: 4vw;
+    }
+    .join-header p{
         font-size: 1.5vw;
+        font-weight: 600;
+    }
+    .section-benefits{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .section-benefits img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        order: 2;
+    }
+
+    .testimonials-title-desktop{
+        display: unset;
+        position: relative;
+        font-size: 2vw;
+    }
+    .testimonials-title-mobile{
+        display: none;
+    }
+
+    .section-testimonials{
+        padding: 5vw;
+        align-items: flex-start;
+        gap: 5vw;
+    }
+
+    .testimonials-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .testimonials-container h2{
+        font-size: 3vw;
+        margin-bottom: 1vw;
+    }
+    
+    .testimonials-footer{
+        margin-bottom: 3vw;
+    }
+
+    .testimonials-footer h3{
+        font-size: 2vw;
+    }
+
+    .testimonials-container img{
+        height: 100%;
+        object-fit: cover;
+        object-position: -20vw 0;
+        order: 2;
+    }
+
+    .values-items{
+        flex-wrap: wrap;
+        gap: 5vw;
+        justify-content: center;
+        gap: 2vw;
+    }
+
+    .values-item{
+        width: 45%;
+        padding: 0;
+    }
+
+    .values-item img{
+        width: 20vw;
+        height: auto;
+        max-height: 15vw;
+    }
+
+    .values-item-text h2{
+        font-size: 3.5vw;
+    }
+
+    .values-item-text p{
+        font-size: 2vw;
     }
 }

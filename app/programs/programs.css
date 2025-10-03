@@ -1,161 +1,410 @@
-.back-button{
-    margin: 20vw 0 2vw 0;
-}
-
-.programs-banner{
-    margin: 0vw 5vw 5vw 5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
+.section-programs-header{
+    margin-top: 25vw;
     text-align: center;
     color: #064d79;
 }
-
-.card-icon{
-    width: 15vw;
-    margin: 5vw 0 3vw 0;
-}
-
-.redirect-programs{
-    font-size: 1.8rem;
-    color: #064d79;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.redirect-programs::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    background-color: #abd9e9;
-    transition: transform .2s ease-in-out;
-}
-
-.redirect-programs:hover::after{
-    transform: scaleX(1);
-}
-
-.campaigns{
-    margin: 5vw;
-    margin-top: 15vw;
-}
-
-.campaign{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 10vw 0;
-    gap: 2vw;
-    color:#064d79;
-}
-
-.campaign img{
-    width: 100%;
-    height: fit-content;
-}
-
-.campaign h1{
-    font-size: 2.5rem;
-    text-align: left;
-}
-
-.programs-nav{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 0 5vw 5vw 5vw;
-}
-
-.programs-nav button{
-    background-color: none;
-    border: none;
-    box-shadow: none;
-    background: none;
-    font-size: 1.5rem;
-    color: #064d79;
-}
-
 
 .programs-title{
-    margin: 20vw 5vw 0vw 5vw;
-    color: #064d79;
-    font-size: 7vw;
-    text-align: center;
-    text-decoration: underline #abd9e9;
+    font-size: 6vw;
 }
 
-.program{
-    margin: 20vw 5vw 5vw 5vw;
+.programs-text{
+    font-size: 4.5vw;
+}
+
+.programs-categories{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.programs-categories h2{
+    font-size: 5vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.programs-categories article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 5vw;
+    padding: 10vw 10vw;
+    color: black;
+    margin-top: -5px;
+}
+
+.programs-categories article img{
+    width: 70vw;
+    height: 70vw;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.programs-buttons{
+    padding: 1vw 3vw;
+    width: fit-content;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #064d79;
+    font-size: 4vw;
+    font-weight: 600;
+    border: 2px solid #064d79;
+}
+
+.programs-img{
+    width: 100%;
+    height: auto;
+}
+
+.health-programs-header{
+    margin: 30vw 0 15vw 0;
+    text-align: center;
+    padding: 15vw 10vw;
     color: #064d79;
 }
 
-.multiple-programs{
+.dentistry-article{
+    background-color: #064e7aff;
+    padding: 15vw 10vw;
+    color: white;
     display: flex;
-    gap: 15vw;
     flex-direction: column;
+    gap: 5vw;
+    margin-top: -5px;
 }
 
-.program img{
-    width: 100%;
+.ophtalmology-article{
+    padding: 15vw 10vw;
+    color: #064d79;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin-top: -5px;
 }
 
-.programs-category-title{
-    font-size: 6vw;
-    margin: 7vw 0 0 0;
+.specific-section article{
+    background-color: #137ebeff;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 15vw 10vw;
+    color: white;
+    margin-top: -5px;
 }
 
-@media(min-width:1024px){
-    .programs-banner{
-        margin-top: 2vw;
+.another-activities-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0vw;
+    padding: 5vw 2vw 0 2vw;
+    color: #064d79;
+    margin: 20vw 0;
+}
+
+.another-activities-section article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    text-align: start;
+    padding: 0 15vw;
+    margin-top: 10vw;
+}
+
+.campaigns-header-section{
+    margin: 30vw 0 15vw 0;
+    text-align: center;
+    padding: 15vw 10vw;
+    color: #064d79;
+}
+
+.afternoons-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    padding: 10vw 10vw;
+    color: white;
+    background-color: #137ebeff;
+    margin-top: -5px;
+}
+
+.childrens-day-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    padding: 10vw 10vw;
+    color: #064e7aff;
+    margin-top: -5px;
+}
+
+.birthday-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    padding: 10vw 10vw;
+    color: white;
+    background-color: #064e7aff;
+    margin-top: -5px;
+}
+
+.christmas-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    padding: 10vw 10vw;
+    color: #064e7aff;
+    margin-top: -5px;
+}
+
+.an-act-campaigns{
+    background-color: #231f20ff;
+    color: white!important;
+    margin-bottom: 0!important;
+    padding-bottom: 10vw!important;
+}
+
+.an-act-campaigns a{
+    border-color: white;
+    color: white;
+}
+
+.programs-ac-description{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    text-align: center;
+    align-items: center;
+}
+
+@media(min-width: 1024px) {
+    .section-programs-header{
+        margin-top: 3vw;
+    }
+    .section-programs-header h1{
+        font-size: 3vw;
+        color: #064d79;
+    }
+    .programs-categories{
+        flex-direction: row;
+        justify-content: center;
+        align-items: unset;
+        gap: 15vw;
+    }
+    .programs-categories article{
+        padding: 3vw 0;
+        gap: 1vw;
+    }
+    .programs-categories article img{
+        width: 25vw;
+        height: 25vw;
     }
     .programs-title{
-        margin: 1vw 0 0vw 0;
-        font-size: 3vw;
+        font-size: 5vw;
     }
-    .card-icon{
-        height: 3vw;
-        width: auto;
-        margin-top: 0;
+    .programs-buttons{
+        padding: 0.5vw 1vw;
+        font-size: 1.5vw;
     }
-    .multiple-programs{
-        gap: 5vw;
-        width: 70vw;
+    .pg-main{
+        min-height: 95%;
     }
-    .programs-category-title{
-        font-size: 3vw;
-    }
-    /* custom card */
-    .program-card{
-        flex-direction: row;
-        width: 100%;
-    }
-    .program-card img{
-        height: 30vw;
-        object-fit: cover;
-        max-width: 20vw;
-    }
-    .program-card div{
-        align-items: flex-start;
-        max-width: 50vw;
-    }
-    .program-card div h2{
-        background: none;
-        padding: 0;
+    .health-programs-header{
+        margin: 5vw 0 5vw 0;
+        text-align: center;
+        padding: 5vw 10vw;
         color: #064d79;
+    }
+    .dentistry-section{
+        height: 40vw;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        overflow: hidden;
+    }
+    .dentistry-article h2{
+        font-size: 3vw;
+    }
+    .dentistry-article p{
         font-size: 2vw;
     }
-    .program-card div p{
-        font-size: 1.5vw;
-    }   
-    /* custom card */
+    .dentistry-article{
+        padding: 5vw 5vw;
+        justify-content: center;
+        gap: 2vw;
+    }
+    .ophtalmology-section{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        overflow: hidden;
+        height: 35vw;
+    }
+    .ophtalmology-section img{
+        order: 2;
+    }
+    .ophtalmology-article{
+        padding: 5vw 5vw;
+        justify-content: center;
+        gap: 2vw;
+    }
+    .ophtalmology-article h2{
+        font-size: 3vw;
+    }
+    .ophtalmology-article p{
+        font-size: 2vw;
+    }
+    .specific-section{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        height: 35vw;
+        overflow: hidden;
+    }
+    .specific-section img{
+        object-fit: cover;
+        object-position: 0vw -7vw;
+    }
+    .specific-article{
+        padding: 5vw!important;
+        justify-content: center!important;
+        gap: 2vw !important;
+    }
+    .specific-article h2{
+        font-size: 3vw;
+    }
+    .specific-section p{
+        font-size: 2vw;
+    }
+    .another-activities-section{
+        margin: 2vw 0 10vw 0;
+    }
+    .another-activities-section h2{
+        font-size: 3vw;
+    }
+    .another-activities-section img{
+        width: 80%;
+    }
+    .another-activities-section article{
+        flex-direction: row;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+    .programs-ac-description{
+        width: 75vw;
+        gap: 2vw;
+        align-items: flex-start;
+        text-align: start;
+        /* margin-bottom: 15vw; */
+    }
+    .programs-ac-description h2{
+        font-size: 3vw;
+    }
+    .programs-ac-description p{
+        font-size: 2vw;
+    }
+    .campaigns-header-section{
+        margin: 5vw;
+        padding: 5vw;
+    }
+    .afternoons-section{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+    .afternoons-article{
+        padding: 5vw;
+        gap: 2vw;
+        justify-content: center;
+        align-items: self-start;
+        text-align: start;
+    }
+    .afternoons-article h2{
+        font-size: 3vw;
+    }
+    .afternoons-article p{
+        font-size: 2vw;
+    }
+    .childrens-day-section{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .childrens-day-section img{
+        order: 2;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .childrens-day-article{
+        padding: 5vw 10vw;
+        gap: 2vw;
+        justify-content: center;
+        align-items: self-start;
+        text-align: start;
+
+    }
+    .childrens-day-article h2{
+        font-size: 3vw;
+    }
+    .childrens-day-article p{
+        font-size: 2vw;
+    }
+    .birthday-section{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .birthday-article{
+        padding: 5vw 5vw;
+        gap: 2vw;
+        justify-content: center;
+        align-items: self-start;
+        text-align: start;
+
+    }
+    .birthday-article h2{
+        font-size: 3vw;
+    }
+    .birthday-article p{
+        font-size: 2vw;
+    }
+    .christmas-section{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .christmas-section img{
+        order: 2;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .christmas-article{
+        padding: 5vw 5vw;
+        gap: 2vw;
+        justify-content: center;
+        align-items: self-start;
+        text-align: start;
+
+    }
+    .christmas-article h2{
+        font-size: 3vw;
+    }
+    .christmas-article p{
+        font-size: 2vw;
+    }
+    .christmas-list{
+        list-style-position: inside;
+    }
+    .christmas-list li{
+        font-size: 2vw;
+    }
+    .another-activities-section{
+        margin: 0;
+    }
+    .an-act-campaigns{
+        padding-bottom:0!important ;
+    }
 }

@@ -29,14 +29,13 @@ export default function Navbar(){
         <article 
         className='navbar'
         >
+            <Link href="/" className="navbar-logo">
+                <img src="/ISO_LOGO_UNDOOD.svg" alt="logo" />
+            </Link>
             <Menu isOpen={menuOpen} closeMenu={() =>setMenuOpen(false)} location={location} setMenuOpen={setMenuOpen}/>
             <button onClick={() => setMenuOpen(true)}>
                 <i className="bi bi-list"></i>
             </button>
-            <Link href="/" className="navbar-logo">
-                <img src="logo.svg" alt="logo" />
-                <h1>Undood</h1>
-            </Link>
         </article>
     )
 

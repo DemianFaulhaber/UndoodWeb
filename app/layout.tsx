@@ -5,9 +5,10 @@ import Footer from "./components/footer/footer";
 
 
 export const metadata: Metadata = {
-  title: "Undood",
-  description: "Undood Argentina es una asociación civil de jóvenes que acompaña a hogares con niños, niñas y adolescentes en situación de vulnerabilidad, generando impacto social a través del voluntariado.",
+  title: "Undood Argentina - Transformando realidades, una infancia a la vez",
+  description: "Asociación Civil que acompaña hogares de niños en situación de vulnerabilidad. +200 niños alcanzados, +10 hogares colaboradores, +40 voluntarios. Generamos impacto social real.",
   keywords: [
+    "undood argentina",
     "voluntariado juvenil",
     "organización sin fines de lucro",
     "asociación civil",
@@ -22,26 +23,47 @@ export const metadata: Metadata = {
     "trabajo comunitario",
     "niñez en riesgo",
     "ONG juvenil",
-    "participación solidaria"
+    "participación solidaria",
+    "transformando realidades"
   ],
   openGraph: {
-    title: "Undood",
+    title: "Undood Argentina - Transformando realidades infantiles",
     description:
-      "Somos una asociación civil de jóvenes que genera impacto social a través del voluntariado en hogares con niños y adolescentes.",
+      "Acompañamos a +200 niños en +10 hogares con +40 voluntarios. Cada aporte se transforma en abrigo, juegos, útiles y presencia.",
     url: "https://undood.org",
-    siteName: "Undood",
+    siteName: "Undood Argentina",
     locale: "es_AR",
     type: "website",
+    images: [
+      {
+        url: "/home_image04.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Niños en hogar de Undood Argentina",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "Undood",
+    card: "summary_large_image",
+    title: "Undood Argentina - Transformando realidades infantiles",
     description:
-      "Generamos impacto social acompañando hogares con niños y adolescentes en situación de vulnerabilidad.",
+      "Acompañamos a +200 niños en +10 hogares. Cada aporte cuenta para transformar una infancia.",
+    images: ["/home_image04.jpg"],
   },
   metadataBase: new URL("https://undood.org"),
   alternates: {
     canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -51,13 +73,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
-        <Navbar/>
-        <main className="content">
+        <header role="banner">
+          <Navbar/>
+        </header>
+        <main className="content" role="main" aria-label="Contenido principal">
           {children}
+          <Footer/>
         </main>
-        <Footer/>
       </body>
     </html>
   );
