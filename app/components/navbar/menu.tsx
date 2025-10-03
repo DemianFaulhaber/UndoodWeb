@@ -80,10 +80,6 @@ export default function Menu({isOpen, location, closeMenu, setMenuOpen}:MenuProp
                             onClick={(() => setMenuOpen(false))}
                             className={location === "/programs/health" ? "current-page" : undefined}
                             >Programas de Salud</Link>
-                            <Link href="/programs/campaigns"
-                            onClick={(() => setMenuOpen(false))}
-                            className={location === "/programs/campaigns" ? "current-page" : undefined}
-                            >Campañas</Link>
                         </div>
                     </div>    
                     <div className="n-link">
