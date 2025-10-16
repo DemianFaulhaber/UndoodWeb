@@ -32,7 +32,7 @@ export default function Menu({isOpen, location, closeMenu, setMenuOpen}:MenuProp
         <div 
         className={`menu-background ${isOpen?'menu-visible':'menu-hide'}`}
         onClick={closeMenu}
-        style={{"opacity":isOpen?'75%':'0'}}
+        style={{"opacity":isOpen?'75%':'0', "display":isOpen?'block':'none'}}
         ></div>
         <div 
         className={`menu-container ${isOpen?'menu-visible':'menu-hide'}`}
