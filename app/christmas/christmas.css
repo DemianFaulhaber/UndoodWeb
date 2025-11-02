@@ -48,6 +48,7 @@
     padding: 7vw;
     background-color:#064d79;
     color: white;
+    line-height: 1.5;
 }
 
 .campaign-description{
@@ -231,7 +232,6 @@
         & p{
             font-size: 2vw;
             width: 50%;
-            line-height: 1.5;
         }
     }
     .campaign-notTo{

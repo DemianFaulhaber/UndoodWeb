@@ -17,7 +17,7 @@ export default function ChristmasPage() {
                 <h2>¿Cómo es el proceso?</h2>
                 <ol className="campaign-steps">
                     <li>Vas a recibir la carta que los niños/as le escribieron a Papá y Mamá Noel por mail :)</li>
-                    <li>Tenes hasta el <strong>DOMINGO 15 DE DICIEMBRE </strong>al horario de cierre de cada local, para preparar el regalo y llevarlo a alguno de los puntos de recepción de regalos habilitados. Recordá que hay que ponerle una tarjeta con nombre, edad y hogar para que lo podamos identificar.</li>
+                    <li>Tenes entre el <strong>VIERNES 14 DE NOVIEMBRE </strong>y el <strong>DOMINGO 15 DE DICIEMBRE</strong> al horario de cierre de cada local, para preparar el regalo y llevarlo a alguno de los puntos de recepción de regalos habilitados. Recordá que hay que ponerle una tarjeta con nombre, edad y hogar para que lo podamos identificar.</li>
                     <li>Estate atento/a porque vas a recibir una linda noticia unos días después de que hayas entregado el regalo.</li>
                 </ol>
             </article>
@@ -32,12 +32,11 @@ export default function ChristmasPage() {
                 <ChristmasForm />
             </article>
             <article className="campaign-locations-info" id="retPoints">
-                <p>Estos son los <span style={{backgroundColor:"white",fontWeight:"bold", color:"#064d79", padding: "0 1vw"}}>PUNTOS DE ENCUENTRO</span> habilitados para que dejes tu regalo antes 
-                del <br /><span style={{backgroundColor:"white",fontWeight:"bold", color:"#064d79", padding: "0 1vw"}}>15 DE DICIEMBRE</span></p>
+                <p>Estos son los <span style={{backgroundColor:"white",fontWeight:"bold", color:"#064d79", padding: "0 1vw"}}>PUNTOS DE ENCUENTRO</span> habilitados para que dejes tu regalo entre el <br /><span style={{backgroundColor:"white",fontWeight:"bold", color:"#064d79", padding: "0 1vw"}}>14 DE NOVIEMBRE</span> y el <br /><span style={{backgroundColor:"white",fontWeight:"bold", color:"#064d79", padding: "0 1vw"}}>15 DE DICIEMBRE</span></p>
                 <ChristmasLocationCard />
             </article>
             <article className="campaign-notTo">
-                <h2><strong>IMPORTANTE</strong> Tener en cuenta que <span style={{backgroundColor:"#064d79", fontWeight:"bold", color:"white", padding:"0 1vw"}}>NO REGALAR</span></h2>
+                <h2><strong>IMPORTANTE</strong> Tener en cuenta que - <span style={{backgroundColor:"#064d79", fontWeight:"bold", color:"white", padding:"0 1vw"}}>NO REGALAR</span></h2>
                 <p>Nos parece importante contarte que debido a la situación tan delicada de los niños y las niñas que están en los hogares, intentamos no fomentar la violencia ni la agresión así como tampoco revivir feos recuerdos. <strong>Por eso te pedimos que por más que lo pidan en la carta NO REGALES:</strong></p>
                 <ol>
                     <li>ARMAS DE NINGÚN TIPO</li>

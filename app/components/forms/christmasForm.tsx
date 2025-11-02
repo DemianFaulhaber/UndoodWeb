@@ -255,7 +255,7 @@ export function ChristmasForm() {
                         <ErrorMessage name="children_id" component="div" className="field-error" />
                     </div>
                     <div className="terms">
-                        <label htmlFor="terms">Acepto los <Link href={`/Terminos_y_Condiciones.pdf`}>términos y condiciones</Link></label>
+                        <label htmlFor="terms">Acepto los <Link href={`/Terminos_y_Condiciones.pdf`} target="_blank" rel="noopener noreferrer">términos y condiciones</Link></label>
                         <input type="checkbox" id="terms" name="terms" required onChange={handleTermsField} />
                     </div>
                     
