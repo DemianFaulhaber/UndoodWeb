@@ -191,6 +191,8 @@
     }
     .menu-hide{
         left: 0;
+        width: 100%!important;
+        height: auto!important;
     }
     .menu-container{
         background-color: none;

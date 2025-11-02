@@ -1,0 +1,173 @@
+.christmas-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #054D79;
+
+}
+
+.christmas-decoration{
+    height: 100%;
+    width: 50%;
+}
+
+.christmas-header-text{
+    color: white;
+    margin-left: 5vw;
+    position:relative;
+}
+
+.christmas-header-text h2{
+    font-size: 2vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+.christmas-header-text h1{
+    font-size: 6vw;
+    font-weight: bold;
+    margin: 0;
+}
+.christmas-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #054D79;
+    margin-top: 10vw;
+}
+
+.christmas-footer-text{
+    color: #ACD8E9;
+    margin-left: 5vw;
+    position:relative;
+}
+
+.campaign-locations-info{
+    padding: 7vw;
+    background-color:#064d79;
+    color: white;
+}
+
+.campaign-description{
+    padding: 5vw;
+    font-size: 4vw;
+    line-height: 1.5;
+    color: #064d79;
+    background-color: #ACD8E9;
+}
+
+.campaign-steps {
+    padding-left: 5vw;
+    overflow: visible;
+    margin-right: 2vw;
+}
+
+.campaign-steps li {
+    overflow: visible;
+}
+
+.campaign-steps li::marker {
+    color: #064d79;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.christmas-form-container{
+    padding: 15vw 5vw;
+    color: #064d79;
+}
+
+.christmas-form-container h2{
+    font-size: 5vw;
+    margin-bottom: 3vw;
+    margin-right: 5vw;
+}
+
+.christmas-form-container h3{
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 5vw 0;
+    color: #AE0014;
+}
+
+.christmas-form{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    & .terms{
+        flex-direction: row;
+        gap: 2vw;
+    }
+    & input{
+        padding: 1vw 2vw;
+        font-size: 4vw;
+    }
+    & select{
+        padding: 1vw 2vw;
+        font-size: 4vw;
+    }
+    & button {
+        display: inline-block;
+        padding: 2vw 5vw;
+        width: fit-content;
+        font-size: 4vw;
+        background-color: #ACD8E9;
+        border-radius: 10px;
+        color: #064d79;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.christmas-form div{
+    margin-bottom: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.company-field label{
+    display: flex;
+    gap: 2vw;
+}
+
+
+.campaign-notTo{
+    display: flex;
+    flex-direction: column;
+    padding: 10vw 5vw;
+    color: #064d79;
+
+     & h2 {
+        font-size: 5vw;
+        margin-bottom: 3vw;
+        margin-right: 15vw;
+        font-weight: 500;
+     }
+
+    & p{
+        font-size: 4vw;
+        /* line-height: 1.5; */
+        /* margin: 3vw 0; */
+    }
+
+     & ol{
+        list-style: disc;
+        padding-left: 5vw;
+        margin: 3vw 0;
+     }
+
+     & li{
+        overflow: visible;
+     }
+}
+
+
+/* auxiliares */
+
+.asterizco{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}

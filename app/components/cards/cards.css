@@ -56,6 +56,49 @@
     border-radius: 5vw;
 }
 
+.christmas-location-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin-top: 5vw;
+}
+
+.christmas-location-card{
+    border: 2px solid white;
+    padding: 5vw;
+    line-height: 6vw;
+}
+
+.christmas-location-link{
+    margin-top: 2vw;
+    display: inline-block;
+    padding: 2vw ;
+    background-color: #ACD8E9;
+    color: #064d79;
+    text-decoration: none;
+    font-size: 4vw;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.associated-company{
+    background-color: #abd9e9;
+    color: #064d79;
+    border: none;
+}
+
+.associated-company h3{
+    background-color: #064d79;
+    color: white;
+    padding: 0.5vw 2vw;
+    font-size: 5vw;
+    display: inline;
+}
+
+/* .associated-company p{
+    font-size: ;
+} */
+
 @media(min-width:1024px){
     .vertical-action-card{
         padding: 1vw;
