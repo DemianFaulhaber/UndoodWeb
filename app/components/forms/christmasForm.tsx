@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
+import { env } from "process";
 
 // Error codes del backend
 type ChristmasErrorCode = 
@@ -255,7 +256,7 @@ export function ChristmasForm() {
                         <ErrorMessage name="children_id" component="div" className="field-error" />
                     </div>
                     <div className="terms">
-                        <label htmlFor="terms">Acepto los <Link href="/terms">términos y condiciones</Link></label>
+                        <label htmlFor="terms">Acepto los <Link href={`/Terminos_y_Condiciones.pdf`}>términos y condiciones</Link></label>
                         <input type="checkbox" id="terms" name="terms" required onChange={handleTermsField} />
                     </div>
                     
