@@ -105,6 +105,10 @@ RetPoint.init({
     availability_time:{
         type: DataTypes.JSON,
         allowNull: false,
+    },
+    location_link:{
+        type: DataTypes.STRING,
+        allowNull: false,
     }
 }, {
     sequelize,

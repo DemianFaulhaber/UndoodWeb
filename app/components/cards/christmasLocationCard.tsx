@@ -9,7 +9,7 @@ interface RetPoint {
     location: string;
     availability_time: Record<string, string>;
     associatedCompany: boolean;
-    location_link?: string;
+    location_link: string;
 }
 
 export default function ChristmasLocationCard(){
@@ -97,7 +97,7 @@ export default function ChristmasLocationCard(){
     return(
         <div className="christmas-location-card-container">
             {retPoints.map((point, index) => 
-                point.associatedCompany ? (
+                point.associatedCompany === true ? (
                     <div key={index} className="christmas-location-card associated-company">
                         <h3>Exclusivo</h3>
                         <p>{point.name}</p>
@@ -112,7 +112,7 @@ export default function ChristmasLocationCard(){
                             ))}
                         </ul>
                         {point.location_link && (
-                            <Link href={point.location_link} target="_blank" rel="noopener noreferrer" className='christmas-location-link'>
+                            <Link href={point.location_link!} target="_blank" rel="noopener noreferrer" className='christmas-location-link'>
                                 Ver en Google Maps
                             </Link>
                         )}

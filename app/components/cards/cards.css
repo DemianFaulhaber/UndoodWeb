@@ -131,13 +131,16 @@
     .christmas-location-card-container{
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 3vw 0;
-        justify-content: space-between;
+        gap: 3vw;
+        justify-content: center;
     }
     .christmas-location-card{
         width: 30%;
         padding: 1vw;
         overflow-wrap: break-word;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
         & p{
             line-height: normal;
             width: auto;
@@ -145,5 +148,14 @@
         & h3{
             line-height: normal;
         }
+        & ul{
+            line-height: 2vw;
+        }
+    }
+    .christmas-location-link{
+        font-size: 1.5vw;
+        padding: 0.5vw 1vw;
+        line-height: normal;
+        width: fit-content;
     }
 }
