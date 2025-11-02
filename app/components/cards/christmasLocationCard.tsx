@@ -1,42 +1,35 @@
 "use client"
+import { useState, useEffect } from 'react';
 import Link from 'next/link'
 import './cards.css'
 
-const retPoints = [
-    {
-    name: "Punto de Retiro 1",
-    location: "Viamonte 1432, C1055 ABB, Buenos Aires.",
-    availability_time: {
-        0: "9:00-20:00",
-        1: "9:00-20:00",
-        2: "9:00-20:00",
-        3: "9:00-20:00",
-        4: "9:00-13:00, 17:00-20:00",
-        5: "9:00-13:00, 17:00-20:00",
-        6: "0"
-    },
-    associatedCompany: false,
-    location_link: "https://maps.app.goo.gl/2Ch6piQ176zSHxo97"
-},
-    {
-    name: "Punto de Retiro 2",
-    location: "Dirección 2",
-    availability_time: {
-        0: "9:00-20:00",
-        1: "9:00-20:00",
-        2: "9:00-20:00",
-        3: "9:00-20:00",
-        4: "9:00-20:00",
-        5: "9:00-13:00, 17:00-20:00",
-        6: "0"
-    },
-    associatedCompany: false,
-    location_link: "https://maps.app.goo.gl/2Ch6piQ176zSHxo97"
+interface RetPoint {
+    id: number;
+    name: string;
+    location: string;
+    availability_time: Record<string, string>;
+    associatedCompany: boolean;
+    location_link?: string;
 }
-]
-
 
 export default function ChristmasLocationCard(){
+    const [retPoints, setRetPoints] = useState<RetPoint[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        fetch('/api/christmas/read?type=retirement_points')
+            .then(res => res.json())
+            .then((data: RetPoint[]) => {
+                setRetPoints(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error('Error fetching retirement points:', err);
+                setError('Error al cargar los puntos de retiro');
+                setLoading(false);
+            });
+    }, []);
 
     function daysToInterval(availability_time: Record<string, string>): string[] {
         const daysNames = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
@@ -85,7 +78,21 @@ export default function ChristmasLocationCard(){
         return intervals;
     }
 
+    if (loading) {
+        return (
+            <div className="christmas-location-card-container">
+                <p>Cargando puntos de retiro...</p>
+            </div>
+        );
+    }
 
+    if (error) {
+        return (
+            <div className="christmas-location-card-container">
+                <p style={{ color: '#c00' }}>{error}</p>
+            </div>
+        );
+    }
 
     return(
         <div className="christmas-location-card-container">

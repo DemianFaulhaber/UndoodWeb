@@ -68,6 +68,10 @@ Child.init({
     available:{
         type: DataTypes.BOOLEAN,
         allowNull: false,
+    },
+    gifts:{
+        type: DataTypes.STRING,
+        allowNull: true,
     }
 }, {
     sequelize,

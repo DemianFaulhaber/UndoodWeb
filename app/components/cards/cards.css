@@ -128,4 +128,22 @@
         padding: 1vw 3vw;
         font-size: 1vw;
     }
+    .christmas-location-card-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3vw 0;
+        justify-content: space-between;
+    }
+    .christmas-location-card{
+        width: 30%;
+        padding: 1vw;
+        overflow-wrap: break-word;
+        & p{
+            line-height: normal;
+            width: auto;
+        }
+        & h3{
+            line-height: normal;
+        }
+    }
 }
