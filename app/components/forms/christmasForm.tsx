@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
-import { env } from "process";
 
 // Error codes del backend
 type ChristmasErrorCode = 
