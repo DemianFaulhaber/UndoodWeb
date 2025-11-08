@@ -80,7 +80,7 @@ async function asignChildrenToUser(userId: number, childrenId: number) {
 
 async function sendMail(to: string, userName: string, childrenId: number) {
     const child = await Child.findByPk(childrenId, {
-        attributes: ['name', 'age', 'house', 'gifts']
+        attributes: ['name', 'age', 'house', 'gifts', 'card']
     });
     
     if (!child) {
@@ -92,8 +92,14 @@ async function sendMail(to: string, userName: string, childrenId: number) {
     const childAge = child.get('age') as number;
     const childHouse = child.get('house') as string;
     const childGifts = child.get('gifts') as string;
+    const childCard = child.get('card') as boolean;
     const childCardUrl = `${childHouse.toUpperCase().replace(/\s+/g, '_')}_${childName.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '_').toUpperCase()}.pdf`;
-    const html = `<html dir="ltr" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/1999/xhtml" lang="es">
+    let html: string;
+    if (!childCard) {
+        html = `<html><body><img src="${env.IMAGES_URL}emailImages/no-card.png" alt="No card available"></body></html>`;
+    }
+    else{
+        html = `<html dir="ltr" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/1999/xhtml" lang="es">
         <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -241,6 +247,7 @@ async function sendMail(to: string, userName: string, childrenId: number) {
         </div>
         </body>
     </html>`;
+    }
     try {
         console.log(childCardUrl);
         await resend.emails.send({
