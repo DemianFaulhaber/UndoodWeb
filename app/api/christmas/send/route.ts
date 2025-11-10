@@ -17,6 +17,21 @@ interface NewUserBody {
     children_id?: number | null;
 }
 
+//auxiliary functions
+
+function decimalToMonths(value:number){
+    const month = value * 12;
+    if (month < 0.9) {
+        return Math.floor(month);
+    }
+    else{
+        return Math.ceil(month);
+    }
+}
+
+//
+
+
 async function addUser(body: NewUserBody) {
     const { name, email, cel, company } = body;
     try {
@@ -94,6 +109,7 @@ async function sendMail(to: string, userName: string, childrenId: number) {
     const childGifts = child.get('gifts') as string;
     const childCard = child.get('card') as boolean;
     const childCardUrl = `${childHouse.toUpperCase().replace(/\s+/g, '_')}_${childName.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '_').toUpperCase()}.pdf`;
+
     let html: string;
     if (!childCard) {
         html = `<html><body><img src="${env.IMAGES_URL}emailImages/no-card.png" alt="No card available"></body></html>`;
@@ -195,8 +211,8 @@ async function sendMail(to: string, userName: string, childrenId: number) {
                         <td valign="top" align="center" style="padding:0;Margin:0;width:560px">
                         <table cellspacing="0" cellpadding="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-spacing:0px">
                             <tr>
-                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21px;letter-spacing:0;color:#fefdfd;font-size:14px">Hola ${userName}, ¡vas a ser Papá /&nbsp;Mamá Noel&nbsp;de&nbsp;<strong>${childName}!</strong><br><br>${childName} tiene ${childAge} años y está en el&nbsp;<strong>Hogar ${childHouse}.</strong>&nbsp;y en su carta, que también te adjuntamos, pidió:<br><br><strong>${childGifts}</strong><br><br>Recordá que tenés entre el <strong>VIERNES 14 DE NOVIEMBRE</strong> y el <strong>DOMINGO 15 DE DICIEMBRE</strong>&nbsp;al horario de cierre de cada local, para preparar el regalo y llevarlo a alguno de los puntos de recepción de regalos habilitados. No te olvides de ponerle una<strong> tarjeta con nombre, edad y hogar para que lo podamos identificar.</strong></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;letter-spacing:0;color:#333333;font-size:14px"><strong><br></strong></p></td>
-                            </tr>
+                            <td align="left" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:21px;letter-spacing:0;color:#fefdfd;font-size:14px">Hola ${userName}, ¡vas a ser Papá /&nbsp;Mamá Noel&nbsp;de&nbsp;<strong>${childName}!</strong><br><br>${childName} tiene ${childAge >= 1 ? childAge + ' años' : decimalToMonths(childAge) + ' meses' } años y está en el&nbsp;<strong>Hogar ${childHouse}.</strong>&nbsp;y en su carta, que también te adjuntamos, pidió:<br><br><strong>${childGifts}</strong><br><br>Recordá que tenés entre el <strong>VIERNES 14 DE NOVIEMBRE</strong> y el <strong>DOMINGO 15 DE DICIEMBRE</strong>&nbsp;al horario de cierre de cada local, para preparar el regalo y llevarlo a alguno de los puntos de recepción de regalos habilitados. No te olvides de ponerle una<strong> tarjeta con nombre, edad y hogar para que lo podamos identificar.</strong></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;letter-spacing:0;color:#333333;font-size:14px"><strong><br></strong></p></td>
+                            </tr> 
                             <tr>
                             <td align="left" class="es-text-6118" style="padding:0;Margin:0"><p class="es-text-mobile-size-16" style="Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:24px;letter-spacing:0;color:#fefdfd;font-size:16px"><strong>Conocé todos los puntos de recepción haciendo click acá:&nbsp;</strong></p><p class="es-text-mobile-size-16" style="Margin:0;mso-line-height-rule:exactly;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:24px;letter-spacing:0;color:#fefdfd;font-size:16px"><strong><br></strong></p></td>
                             </tr>
@@ -250,7 +266,7 @@ async function sendMail(to: string, userName: string, childrenId: number) {
     }
     try {
         console.log(childCardUrl);
-        await resend.emails.send({
+        const res = await resend.emails.send({
             from:'info@undoodargentina.com.ar',
             to: to,
             subject: 'Bienvenido a la campaña de Navidad',
@@ -262,6 +278,7 @@ async function sendMail(to: string, userName: string, childrenId: number) {
                 }
             ]
         });
+        console.log(res);
         return createSuccessResponse('Email enviado correctamente');
     } catch (error) {
         return createErrorResponse(

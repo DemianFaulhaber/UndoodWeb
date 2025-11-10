@@ -3,6 +3,7 @@ import Image from "next/image";
 import './christmas.css'
 import ChristmasLocationCard from "../components/cards/christmasLocationCard";
 
+
 export default function ChristmasPage() {
     return(
         <main>

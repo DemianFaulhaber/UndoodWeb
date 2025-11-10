@@ -4,6 +4,16 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
 
+function decimalToMonths(value:number){
+    const month = value * 12;
+    if (month < 0.9) {
+        return Math.floor(month);
+    }
+    else{
+        return Math.ceil(month);
+    }
+}
+
 // Error codes del backend
 type ChristmasErrorCode = 
     | 'USER_ALREADY_EXISTS'
@@ -100,7 +110,7 @@ export function ChristmasForm() {
             // Formatear children
             const formattedChildren = childrenData.map((child) => ({
                 id: child.idchildren,
-                label: `${child.name}, ${child.age} años de ${child.house}`,
+                label: `${child.name}, ${child.age >= 1 ? child.age + ' años' : decimalToMonths(child.age) + ' meses'}, de ${child.house}`,
                 available: child.available
             }));
             
@@ -248,7 +258,7 @@ export function ChristmasForm() {
                                 c.available === true ? (
                                     <option key={c.id} value={c.id}>
                                         {c.label}
-                                    </option>
+                                    </option> 
                                 ) : null
                             )}
                         </Field>
