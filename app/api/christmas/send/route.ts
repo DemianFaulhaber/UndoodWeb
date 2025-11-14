@@ -266,17 +266,14 @@ async function sendMail(to: string, userName: string, childrenId: number) {
     }
     try {
         console.log(childCardUrl);
+        const attachments= childCard ? [{filename: 'Carta_Navidad.pdf',
+                    path:`${env.IMAGES_URL}cards/${childCardUrl}`}] : undefined;
         const res = await resend.emails.send({
             from:'info@undoodargentina.com.ar',
             to: to,
             subject: 'Bienvenido a la campaña de Navidad',
             html: html,
-            attachments:[
-                {
-                    filename: 'Carta_Navidad.pdf',
-                    path:`${env.IMAGES_URL}cards/${childCardUrl}`
-                }
-            ]
+            attachments: attachments
         });
         console.log(res);
         return createSuccessResponse('Email enviado correctamente');
