@@ -110,8 +110,7 @@ export function ChristmasForm() {
             // Formatear children
             const formattedChildren = childrenData.map((child) => ({
                 id: child.idchildren,
-                label: `${child.name}, 
-                ${child.age !== 99 ? (child.age >= 1 ? child.age + ' años,' : decimalToMonths(child.age) + ' meses,') : ''} de ${child.house}`,
+                label: `${child.name}, ${child.age !== 99 ? (child.age >= 1 ? child.age + ' años,' : decimalToMonths(child.age) + ' meses,') : ''} de ${child.house}`,
                 available: child.available
             }));
             
