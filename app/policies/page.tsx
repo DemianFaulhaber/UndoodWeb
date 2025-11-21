@@ -8,15 +8,15 @@ export default function PoliciesPage() {
                 
                 <section>
                     <p>
-                        <strong>1.</strong> Los presentes términos y condiciones generales (en adelante, los "Términos y Condiciones") 
-                        rigen la relación entre los usuarios del sitio web www.undoodargentina.com.ar (en adelante, los "Usuarios") 
-                        y Undood Argentina, propietaria de dicho sitio web (en adelante, "Undood").
+                        <strong>1.</strong> Los presentes términos y condiciones generales (en adelante, los &quot;Términos y Condiciones&quot;) 
+                        rigen la relación entre los usuarios del sitio web www.undoodargentina.com.ar (en adelante, los &quot;Usuarios&quot;) 
+                        y Undood Argentina, propietaria de dicho sitio web (en adelante, &quot;Undood&quot;).
                     </p>
                 </section>
 
                 <section>
                     <p>
-                        <strong>2.</strong> A través del sitio web www.undoodargentina.com.ar (en adelante, el "Sitio") los usuarios 
+                        <strong>2.</strong> A través del sitio web www.undoodargentina.com.ar (en adelante, el &quot;Sitio&quot;) los usuarios 
                         podrán acceder a contenidos que Undood pone a su disposición en el Sitio, así como realizar donaciones y 
                         convertirse en donadores periódicos de Undood.
                     </p>
@@ -65,7 +65,7 @@ export default function PoliciesPage() {
                 <section>
                     <p>
                         <strong>8.</strong> Undood cumplirá con lo establecido en la Ley 25.326 y normativa complementaria (en adelante, 
-                        la "Normativa de Datos Personales"). En particular, Undood se compromete a no utilizar y/o divulgar a terceros los 
+                        la &quot;Normativa de Datos Personales&quot;). En particular, Undood se compromete a no utilizar y/o divulgar a terceros los 
                         datos personales del Usuario, como así también a cumplir con los principios de calidad, finalidad, confidencialidad 
                         y seguridad previstos en la normativa de protección de datos personales.
                     </p>
