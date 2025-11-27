@@ -17,13 +17,13 @@ export async function GET() {
         try{
             await fetch(`${env.IMAGES_URL}cards/${childCardUrl}`, { method: 'HEAD' });
             // El archivo existe, puedes realizar acciones adicionales aquí
-            if(child.get('available') as boolean){
+            if(!child.get('available') as boolean){
                 const user = await User.findOne({ where: { childrenid: childId } });
                 if(user){
                     sendMail(user.get('email') as string, user.get('name') as string, childId);
                 }
-                child.update({ childrenid: childId, card: true });
             }
+            await child.update({ childrenid: childId, card: true });
         } catch (error){
             console.error(`Error accessing file for child ID ${childId}:`, error);
             console.log(childCardUrl)
