@@ -9,7 +9,7 @@ export async function GET() {
 
 
     for (const child of noCardChildren) {
-        const childId = child.get('idchild') as number;
+        const childId = child.get('idchildren') as number;
         const childName = child.get('name') as string;
         const childHouse = child.get('house') as string;
         const childCardUrl = `${childHouse.toUpperCase().replace(/\s+/g, '_')}_${childName.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '_').toUpperCase()}.pdf`;
