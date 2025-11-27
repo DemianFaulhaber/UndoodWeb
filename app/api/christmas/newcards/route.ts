@@ -23,7 +23,8 @@ export async function GET() {
                 }
                 child.update({ childrenid: childId, card: true });
             }
-        } catch {
+        } catch (error){
+            console.error(`Error accessing file for child ID ${childId}:`, error);
             console.log(childCardUrl)
             fails.push(childId);
         }
