@@ -23,7 +23,7 @@ export async function GET() {
                 }
                 child.update({ childrenid: childId, card: true });
             }
-        } catch (error) {
+        } catch {
             fails.push(childId);
         }
     }
