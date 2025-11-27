@@ -24,6 +24,7 @@ export async function GET() {
                 child.update({ childrenid: childId, card: true });
             }
         } catch {
+            console.log(childCardUrl)
             fails.push(childId);
         }
     }
