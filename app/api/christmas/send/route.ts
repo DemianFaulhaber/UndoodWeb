@@ -93,7 +93,7 @@ async function asignChildrenToUser(userId: number, childrenId: number) {
     return createSuccessResponse('Niño/a asignado correctamente');
 }
 
-async function sendMail(to: string, userName: string, childrenId: number) {
+export async function sendMail(to: string, userName: string, childrenId: number) {
     const child = await Child.findByPk(childrenId, {
         attributes: ['name', 'age', 'house', 'gifts', 'card']
     });
