@@ -14,7 +14,7 @@ export async function GET() {
         const childHouse = child.get('house') as string;
         const childCardUrl = `${childHouse.toUpperCase().replace(/\s+/g, '_')}_${childName.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '_').toUpperCase()}.pdf`;
         try{
-            await fs.promises.access(childCardUrl, fs.constants.F_OK);
+            await fetch(childCardUrl, { method: 'HEAD' });
             // El archivo existe, puedes realizar acciones adicionales aquí
             if(child.get('available') as boolean){
                 const user = await User.findOne({ where: { childrenid: childId } });
