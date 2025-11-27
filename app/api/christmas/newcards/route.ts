@@ -16,6 +16,7 @@ export async function GET() {
         const childCardUrl = `${childHouse.toUpperCase().replace(/\s+/g, '_')}_${childName.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '_').toUpperCase()}.pdf`;
         try{
             await fetch(`${env.IMAGES_URL}cards/${childCardUrl}`, { method: 'HEAD' });
+            await child.update({ childrenid: childId, card: true });
             // El archivo existe, puedes realizar acciones adicionales aquí
             if(!child.get('available') as boolean){
                 const user = await User.findOne({ where: { childrenid: childId } });
@@ -23,7 +24,7 @@ export async function GET() {
                     sendMail(user.get('email') as string, user.get('name') as string, childId);
                 }
             }
-            await child.update({ childrenid: childId, card: true });
+            await new Promise(resolve => setTimeout(resolve, 2100));
         } catch (error){
             console.error(`Error accessing file for child ID ${childId}:`, error);
             console.log(childCardUrl)
