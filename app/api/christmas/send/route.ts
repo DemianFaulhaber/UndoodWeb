@@ -336,5 +336,5 @@ export async function POST(req: Request) {
     }
 
     console.log(body);
-    return await sendMail(body.email, body.name, body.children_id);
+    return await sendMail(body.email, body.name, body.children_id || null); ;
 }
