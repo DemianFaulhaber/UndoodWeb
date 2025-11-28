@@ -159,7 +159,8 @@ export function ChristmasForm() {
         {availableChildrenCount <= 0 ? (
             <div className="no-more-childrens">
                 <h2>¡Todos los chicos consiguieron un regalo!</h2>
-                <p>pero todavía podés anotarte en la lista de espera.</p><br/>
+                <p>Pero todavía podés anotarte en la lista de espera.</p>
+                <p>Te vamos a avisar cuando hayan más cartas disponibles.</p><br/>
             </div>
         ) : null}
         <Formik
