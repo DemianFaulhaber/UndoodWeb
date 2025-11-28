@@ -336,8 +336,5 @@ export async function POST(req: Request) {
     }
 
     console.log(body);
-    if(body.children_id === null || body.children_id === undefined) {
-        return createSuccessResponse('Usuario creado sin niño asignado', 201);
-    }
     return await sendMail(body.email, body.name, body.children_id);
 }
