@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
+import { Http2ServerRequest } from "http2";
 
 function decimalToMonths(value:number){
     const month = value * 12;
@@ -74,7 +75,7 @@ interface CompanyData {
 }
 
 // Schema de validación
-const validationSchema = Yup.object({
+const getValidationSchema = (hasAvailableChildren: boolean) => Yup.object({
     name: Yup.string()
         .min(2, 'El nombre debe tener al menos 2 caracteres')
         .max(100, 'El nombre es demasiado largo')
@@ -88,8 +89,9 @@ const validationSchema = Yup.object({
         .matches(/^[0-9]{10}$/, 'El celular debe tener 10 dígitos (sin el +54)')
         .required('El celular es obligatorio'),
     
-    children_id: Yup.string()
-        .required('Debes elegir un niño/a'),
+    children_id: hasAvailableChildren 
+        ? Yup.string().required('Debes elegir un niño/a')
+        : Yup.string().notRequired(),
 });
 
 export function ChristmasForm() {
@@ -100,6 +102,7 @@ export function ChristmasForm() {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const [termsAccepted, setTermsAccepted] = useState(false);
+    const [availableChildrenCount, setAvailableChildrenCount] = useState(0);
 
     useEffect(() => {
         Promise.all([
@@ -120,7 +123,9 @@ export function ChristmasForm() {
             //     label: company.name
             // }));
 
+            const availableCount = formattedChildren.filter(c => c.available === true).length;
             setChildren(formattedChildren);
+            setAvailableChildrenCount(availableCount);
             // setCompanies(formattedCompanies);
             setLoading(false);
         })
@@ -149,7 +154,15 @@ export function ChristmasForm() {
         return <div>Cargando formulario...</div>;
     }
 
+
     return(
+        <>
+        {availableChildrenCount <= 0 ? (
+            <div className="no-more-childrens">
+                <h2>¡Todos los chicos consiguieron un regalo!</h2>
+                <p>pero todavía podés anotarte en la lista de espera.</p><br/>
+            </div>
+        ) : null}
         <Formik
             initialValues={{
                 name: "", 
@@ -158,7 +171,7 @@ export function ChristmasForm() {
                 company: "",
                 children_id: ""
             }}
-            validationSchema={validationSchema}
+            validationSchema={getValidationSchema(availableChildrenCount > 0)}
             onSubmit={async (values, { resetForm }) => {
                 setError('');
                 setSuccess(false);
@@ -250,20 +263,22 @@ export function ChristmasForm() {
                         </Field>
                         <ErrorMessage name="company" component="div" className="field-error" />
                     </div> */}
-                    <div className="children-field">
-                        <label htmlFor="childrenid">Elegí a que niño/a queres hacerle un regalo <span className="asterizco">*</span></label>
-                        <Field name="children_id" as="select">
-                            <option value="" disabled>Elegir</option>
-                            {children.map((c) => 
-                                c.available === true ? (
-                                    <option key={c.id} value={c.id}>
-                                        {c.label}
-                                    </option> 
-                                ) : null
-                            )}
-                        </Field>
-                        <ErrorMessage name="children_id" component="div" className="field-error" />
-                    </div>
+                    {availableChildrenCount > 0 && (
+                        <div className="children-field">
+                            <label htmlFor="childrenid">Elegí a que niño/a queres hacerle un regalo <span className="asterizco">*</span></label>
+                            <Field name="children_id" as="select">
+                                <option value="" disabled>Elegir</option>
+                                {children.map((c) => 
+                                    c.available === true ? (
+                                        <option key={c.id} value={c.id}>
+                                            {c.label}
+                                        </option> 
+                                    ) : null
+                                )}
+                            </Field>
+                            <ErrorMessage name="children_id" component="div" className="field-error" />
+                        </div>
+                    )}
                     <div className="terms">
                         <label htmlFor="terms">Acepto los <Link href={`/Terminos_y_Condiciones.pdf`} target="_blank" rel="noopener noreferrer">términos y condiciones</Link></label>
                         <input type="checkbox" id="terms" name="terms" required onChange={handleTermsField} />
@@ -293,7 +308,9 @@ export function ChristmasForm() {
                             marginBottom: '1rem',
                             border: '1px solid #cfc'
                         }}>
-                            ¡Registro exitoso! Revisá tu email para más información sobre el niño/a que elegiste. 🎄
+                            {availableChildrenCount > 0 
+                                ? '¡Registro exitoso! Revisá tu email para más información sobre el niño/a que elegiste. 🎄'
+                                : '¡Registro Exitoso! Ya te anotaste en la lista de espera'}
                         </div>
                     )}
                     
@@ -304,5 +321,6 @@ export function ChristmasForm() {
                 </Form>
             )}
         </Formik>
+        </>
     )
 }
